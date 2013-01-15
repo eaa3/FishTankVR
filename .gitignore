@@ -1,0 +1,9 @@
+# .gitignore
+
+/Release
+/Debug
+/ipch
+/FishTankVR/Release
+/FishTankVR/Debug
+FishTankVR.sdf
+FishTankVR.opensdf
