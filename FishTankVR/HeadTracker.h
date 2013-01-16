@@ -8,6 +8,8 @@
 using std::string;
 using namespace tld;
 
+float remap(float a, float xi, float yi, float xf, float yf);
+
 
 class HeadTracker
 {
@@ -24,10 +26,13 @@ public:
 
 
 	bool init(Mat& frame);
+	bool isInited();
+
 	void reset();
 
 	BoundingBox track(Mat& frame);
-	//Vec3f trackCoord(Mat& frame);
+
+	Vector3 estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&));
 
 
 

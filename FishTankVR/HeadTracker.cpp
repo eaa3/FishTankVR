@@ -1,6 +1,13 @@
 #include "HeadTracker.h"
 
 
+float remap(float a, float xi, float yi, float xf, float yf)
+{
+	float yp = yf + ((a - xf)/(xf-xi))*(yf - yi);
+
+	return yp;
+}
+
 HeadTracker::HeadTracker(string tld_config, string face_detector_config )
 {
 	this->p = new Predator(tld_config);
@@ -31,7 +38,7 @@ bool HeadTracker::init(Mat& frame)
 		{
 
 			selectedBB = BoundingBox(this->fd->detectionResult[0]);
-			originalBB = selectedBB;
+			this->originalBB = selectedBB;
 
 			this->p->reset();
 			this->p->selectObject(frame, selectedBB);
@@ -46,6 +53,28 @@ bool HeadTracker::init(Mat& frame)
 
 	return ready;
 
+}
+
+bool HeadTracker::isInited()
+{
+	return this->inited;
+}
+
+Vector3 HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&))
+{
+	Vector3 eyepos(0,0,0);
+
+	float x = (bb.x+bb.w)/2;
+	float y = (bb.y+bb.y)/2;
+
+
+	eyepos[0] = remap(x, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);
+	eyepos[1] = remap(y, -videoH/2, -realVideoH/2, videoH/2, realVideoH/2);
+
+	eyepos[2] = zestimator(bb);
+
+
+	return eyepos;
 }
 
 void HeadTracker::reset()

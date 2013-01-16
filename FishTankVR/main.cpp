@@ -1,5 +1,5 @@
 #include <opencv2/opencv.hpp>
-#include "Predator.h"
+#include "HeadTracker.h"
 
 
 using namespace cv;
@@ -13,13 +13,18 @@ int main()
 
 	VideoCapture cap(0);
 
-	Predator p(TLD_CONFIG_FILE);
+	HeadTracker ht;
+
+	while( !ht.inited) {
 
 
 	while( waitKey(1) < 0 ) 
 	{
 
 		cap >> frame;
+
+
+
 
 
 		imshow("lol",frame);
