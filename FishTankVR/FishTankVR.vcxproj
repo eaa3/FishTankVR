@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="head-tracker\FaceDetector.cpp" />
+    <ClCompile Include="HeadTracker.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tld\boundingbox.cpp" />
     <ClCompile Include="tld\clusterer.cpp" />
@@ -34,6 +36,9 @@
     <ClCompile Include="tld\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="head-tracker\AdaboostDetector.h" />
+    <ClInclude Include="head-tracker\FaceDetector.h" />
+    <ClInclude Include="HeadTracker.h" />
     <ClInclude Include="tld\boundingbox.h" />
     <ClInclude Include="tld\clusterer.h" />
     <ClInclude Include="tld\detector.h" />
@@ -83,11 +88,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir);$(ProjectDir)\cv;$(ProjectDir)\glut;$(ProjectDir)\tld\mftracker;$(ProjectDir)\tld;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\head-tracker;$(ProjectDir);$(ProjectDir)\cv;$(ProjectDir)\glut;$(ProjectDir)\tld\mftracker;$(ProjectDir)\tld;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\cv\bin\x86\vc10\lib;$(ProjectDir)\glut;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(ProjectDir)\tld\mftracker;$(ProjectDir);$(ProjectDir)\cv;$(ProjectDir)\glut;$(ProjectDir)\tld;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\head-tracker;$(ProjectDir)\tld\mftracker;$(ProjectDir);$(ProjectDir)\cv;$(ProjectDir)\glut;$(ProjectDir)\tld;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\glut;$(ProjectDir)\cv\bin\x86\vc10\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
