@@ -101,9 +101,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tld\Vector3.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
     <ClCompile Include="head-tracker\FaceDetector.cpp">
       <Filter>head-tracker\source</Filter>
     </ClCompile>
@@ -111,6 +108,9 @@
       <Filter>head-tracker\source</Filter>
     </ClCompile>
     <ClCompile Include="FishTank.cpp">
+      <Filter>FishTank\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrices.cpp">
       <Filter>FishTank\source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -175,9 +175,6 @@
     <ClInclude Include="tld\twobitbp.h">
       <Filter>tld\inc</Filter>
     </ClInclude>
-    <ClInclude Include="tld\Vector3.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
     <ClInclude Include="head-tracker\AdaboostDetector.h">
       <Filter>head-tracker\inc</Filter>
     </ClInclude>
@@ -188,6 +185,12 @@
       <Filter>head-tracker\inc</Filter>
     </ClInclude>
     <ClInclude Include="FishTank.h">
+      <Filter>FishTank\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrices.h">
+      <Filter>FishTank\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Vectors.h">
       <Filter>FishTank\inc</Filter>
     </ClInclude>
   </ItemGroup>

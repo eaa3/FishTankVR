@@ -38,7 +38,7 @@ int main()
 
 		draw_box(bb,frame,Scalar(255,0,0));
 
-		Vector3 v = ht.estimateSpacePosition(bb,640,57.61f,480,37.5f,estimator);
+		Vec3f v = ht.estimateSpacePosition(bb,640,57.61f,480,37.5f,estimator);
 
 		printf("\r(%.2f,%.2f,%.2f)",v[0],v[1],v[2]);
 

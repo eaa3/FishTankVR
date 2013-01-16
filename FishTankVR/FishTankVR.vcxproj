@@ -15,6 +15,7 @@
     <ClCompile Include="head-tracker\FaceDetector.cpp" />
     <ClCompile Include="HeadTracker.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrices.cpp" />
     <ClCompile Include="tld\boundingbox.cpp" />
     <ClCompile Include="tld\clusterer.cpp" />
     <ClCompile Include="tld\detector.cpp" />
@@ -34,13 +35,13 @@
     <ClCompile Include="tld\Predator.cpp" />
     <ClCompile Include="tld\tld_util.cpp" />
     <ClCompile Include="tld\twobitbp.cpp" />
-    <ClCompile Include="tld\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FishTank.h" />
     <ClInclude Include="head-tracker\AdaboostDetector.h" />
     <ClInclude Include="head-tracker\FaceDetector.h" />
     <ClInclude Include="HeadTracker.h" />
+    <ClInclude Include="Matrices.h" />
     <ClInclude Include="tld\boundingbox.h" />
     <ClInclude Include="tld\clusterer.h" />
     <ClInclude Include="tld\detector.h" />
@@ -61,7 +62,7 @@
     <ClInclude Include="tld\Predator.h" />
     <ClInclude Include="tld\tld_util.h" />
     <ClInclude Include="tld\twobitbp.h" />
-    <ClInclude Include="tld\Vector3.h" />
+    <ClInclude Include="Vectors.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6918ED01-CC70-4A84-8D5F-95014F057047}</ProjectGuid>

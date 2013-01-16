@@ -62,16 +62,16 @@ bool HeadTracker::isInited()
 	return this->inited;
 }
 
-Vector3 HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&))
+Vec3f HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&))
 {
-	Vector3 eyepos(0,0,0);
+	Vec3f eyepos(0,0,0);
 
 	float x =  bb.x+bb.w/2 - videoW/2;
 	float y =  bb.y+bb.h/2 - videoH/2;
 
 
 	eyepos[0] = remap(x, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);
-	eyepos[1] = remap(y, -videoH/2, -realVideoH/2, videoH/2, realVideoH/2);
+	eyepos[1] = -remap(y, -videoH/2, -realVideoH/2, videoH/2, realVideoH/2);
 
 	eyepos[2] = zestimator(bb);
 
@@ -106,7 +106,7 @@ BoundingBox HeadTracker::track(Mat& frame)
 				float nnOpinion = p->detector->nnClassifier->classify(trackedBB.extractNormalizedPatch(frame));
 				float ffOpinion = p->detector->ffClassifier->classify(p->integralImg, trackedBB);
 
-				if( nnOpinion >= 0.7f || ffOpinion > 0.5f )
+				if( nnOpinion >= 0.6f || ffOpinion > 0.5f )
 				{
 					
 					trackedBB.valid = true;

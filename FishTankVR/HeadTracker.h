@@ -32,7 +32,7 @@ public:
 
 	BoundingBox track(Mat& frame);
 
-	Vector3 estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&));
+	Vec3f estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&));
 
 
 
