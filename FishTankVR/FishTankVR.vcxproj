@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FishTank.cpp" />
     <ClCompile Include="head-tracker\FaceDetector.cpp" />
     <ClCompile Include="HeadTracker.cpp" />
     <ClCompile Include="main.cpp" />
@@ -36,6 +37,7 @@
     <ClCompile Include="tld\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FishTank.h" />
     <ClInclude Include="head-tracker\AdaboostDetector.h" />
     <ClInclude Include="head-tracker\FaceDetector.h" />
     <ClInclude Include="HeadTracker.h" />

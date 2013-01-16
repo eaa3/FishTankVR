@@ -35,9 +35,10 @@ bool HeadTracker::init(Mat& frame)
 		this->fd->detect(frame);
 
 		if( this->fd->detectionResult.size() > 0 )
-		{
+		{		
 
 			selectedBB = BoundingBox(this->fd->detectionResult[0]);
+
 			this->originalBB = selectedBB;
 
 			this->p->reset();
@@ -45,6 +46,7 @@ bool HeadTracker::init(Mat& frame)
 
 			ready = true;
 			this->inited = true;
+			
 
 		}
 
@@ -64,8 +66,8 @@ Vector3 HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, 
 {
 	Vector3 eyepos(0,0,0);
 
-	float x = (bb.x+bb.w)/2;
-	float y = (bb.y+bb.y)/2;
+	float x =  bb.x+bb.w/2 - videoW/2;
+	float y =  bb.y+bb.h/2 - videoH/2;
 
 
 	eyepos[0] = remap(x, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);
@@ -99,13 +101,28 @@ BoundingBox HeadTracker::track(Mat& frame)
 
 			if( this->fd->detectionResult.size() )
 			{
-				this->p->currBB = BoundingBox(this->fd->detectionResult[0]);
-				this->p->currBB.valid = true;
+				trackedBB = BoundingBox(this->fd->detectionResult[0]);
+
+				float nnOpinion = p->detector->nnClassifier->classify(trackedBB.extractNormalizedPatch(frame));
+				float ffOpinion = p->detector->ffClassifier->classify(p->integralImg, trackedBB);
+
+				if( nnOpinion >= 0.7f || ffOpinion > 0.5f )
+				{
+					
+					trackedBB.valid = true;
+					p->currBB = trackedBB;
+				}
+				else
+				{
+					trackedBB = BoundingBox();
+				}
 			}
 		}
+		else
+		{
+			trackedBB = p->currBB;
+		}
 
-
-		trackedBB = p->currBB;
 	}
 
 	return trackedBB;

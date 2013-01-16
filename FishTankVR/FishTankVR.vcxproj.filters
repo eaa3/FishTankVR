@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="tld">
       <UniqueIdentifier>{c3d28f23-22e5-4dcd-801a-35cbfd15603c}</UniqueIdentifier>
     </Filter>
@@ -33,6 +29,15 @@
     </Filter>
     <Filter Include="head-tracker\source">
       <UniqueIdentifier>{1b6a3306-208a-4c16-80c4-d4c1b5ce6817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FishTank">
+      <UniqueIdentifier>{fc0692bf-6a07-4bd2-8ba7-61b77899e470}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FishTank\inc">
+      <UniqueIdentifier>{994ddc87-e623-4de1-bfa4-3cafb7042d32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FishTank\source">
+      <UniqueIdentifier>{e9446f6a-0891-4dd9-b25e-457803f21d86}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +109,9 @@
     </ClCompile>
     <ClCompile Include="HeadTracker.cpp">
       <Filter>head-tracker\source</Filter>
+    </ClCompile>
+    <ClCompile Include="FishTank.cpp">
+      <Filter>FishTank\source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +186,9 @@
     </ClInclude>
     <ClInclude Include="HeadTracker.h">
       <Filter>head-tracker\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="FishTank.h">
+      <Filter>FishTank\inc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
