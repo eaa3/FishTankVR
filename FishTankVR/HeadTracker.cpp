@@ -106,7 +106,7 @@ BoundingBox HeadTracker::track(Mat& frame)
 				float nnOpinion = p->detector->nnClassifier->classify(trackedBB.extractNormalizedPatch(frame));
 				float ffOpinion = p->detector->ffClassifier->classify(p->integralImg, trackedBB);
 
-				if( nnOpinion >= 0.6f || ffOpinion > 0.5f )
+				if( nnOpinion >= 0.25f || ffOpinion > 0.3f )
 				{
 					
 					trackedBB.valid = true;

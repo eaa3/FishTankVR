@@ -1,8 +1,21 @@
 #include "FishTank.h"
 
 
-FishTank::FishTank(float l, float r, float b, float t, float n, float f)
+FishTank::FishTank(float l, float r, float b, float t, float n, float f, float aspectRatio)
 {
+
+	
+	this->setInitialFrustum(l,r,b,t,n,f,aspectRatio);
+
+
+}
+
+FishTank::FishTank()
+{
+	this->l = this->r = this->b = this->t = this->n = this->f = 0;
+	this->aspectRatio = 0;
+
+
 }
 
 
@@ -10,16 +23,42 @@ FishTank::~FishTank(void)
 {
 }
 
+
+void FishTank::setInitialFrustum(float l, float r, float b, float t, float n, float f, float aspectRatio)
+{
+	this->l = l;
+	this->r = r;
+	this->b = b;
+	this->t = t;
+	this->n = n;
+	this->f = f;
+	this->aspectRatio = aspectRatio;
+}
+
+
 void FishTank::setFrustum( Vector3 eyepos )
 {
-	this->proj[0]  = 2 * n / (r - l);
-    this->proj[2]  = (r + l) / (r - l);
-    this->proj[5]  = 2 * n / (t - b);
-    this->proj[6]  = (t + b) / (t - b);
-    this->proj[10] = -(f + n) / (f - n);
-    this->proj[11] = -(2 * f * n) / (f - n);
+	float newL = (l*aspectRatio - eyepos.x*n)/eyepos.z;
+	float newR =(r*aspectRatio - eyepos.x*n)/eyepos.z;
+	float newB =(b - eyepos.y*n)/eyepos.z;
+	float newT = (t - eyepos.x*n)/eyepos.z;
+	float newN = n;
+	float newF = f;
+
+
+
+
+	this->proj[0]  = 2 * newN / (newR - newL);
+    this->proj[2]  = (newR + newL) / (newR - newL);
+    this->proj[5]  = 2 * newN / (newT - newB);
+    this->proj[6]  = (newT + newB) / (newT - newB);
+    this->proj[10] = -(newF + newN) / (newF - newN);
+    this->proj[11] = -(2 * newF * newN) / (newF - newN);
     this->proj[14] = -1;
     this->proj[15] = 0;
+
+
+	
 
 }
 
