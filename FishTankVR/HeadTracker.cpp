@@ -70,7 +70,7 @@ Vec3f HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, fl
 	float y =  bb.y+bb.h/2 - videoH/2;
 
 
-	eyepos[0] = remap(x, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);
+	eyepos[0] = -remap(x, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);
 	eyepos[1] = -remap(y, -videoH/2, -realVideoH/2, videoH/2, realVideoH/2);
 
 	eyepos[2] = zestimator(bb);
@@ -126,4 +126,14 @@ BoundingBox HeadTracker::track(Mat& frame)
 	}
 
 	return trackedBB;
+}
+
+Vec3f HeadTracker::track(Mat& frame, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&))
+{
+	BoundingBox bb = this->track(frame);
+
+	Vec3f position = this->estimateSpacePosition(bb, videoW, realVideoW, videoH, realVideoH, zestimator);
+
+
+	return position;
 }

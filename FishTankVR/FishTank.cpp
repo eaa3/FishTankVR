@@ -39,9 +39,9 @@ void FishTank::setInitialFrustum(float l, float r, float b, float t, float n, fl
 void FishTank::setFrustum( Vector3 eyepos )
 {
 	float newL = (l*aspectRatio - eyepos.x*n)/eyepos.z;
-	float newR =(r*aspectRatio - eyepos.x*n)/eyepos.z;
+	float newR = (r*aspectRatio - eyepos.x*n)/eyepos.z;
 	float newB =(b - eyepos.y*n)/eyepos.z;
-	float newT = (t - eyepos.x*n)/eyepos.z;
+	float newT = (t - eyepos.y*n)/eyepos.z;
 	float newN = n;
 	float newF = f;
 
@@ -70,15 +70,20 @@ void FishTank::setView( Vector3 eyepos )
 	forward.normalize();
 
 	Vector3 up(0,1,0);
-	Vector3 left = up.cross(forward);
+	Vector3 left = forward.cross(up);
 	left.normalize();
+
+	up = left.cross(forward);
+	up.normalize();
+
+	this->rt = Matrix4(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 	this->rt.setColumn(0, left);
     this->rt.setColumn(1, up);
-    this->rt.setColumn(2, forward);
+    this->rt.setColumn(2, -forward);
 
 
-	Vector3 t = -rt*eyepos;
+	Vector3 t = (rt*(-eyepos));
 
 	this->rt.setColumn(3, t);
 
