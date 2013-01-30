@@ -18,9 +18,11 @@ private:
 	Predator* p;
 	FaceDetector* fd;
 	bool inited;
-	BoundingBox originalBB;
+	//BoundingBox originalBB;
 
 public:
+
+	BoundingBox originalBB;
 	HeadTracker(string tld_config = TLD_CONFIG_FILE, string face_detector_config = FACE_DETECTOR_CONFIG_FILE);
 	~HeadTracker(void);
 

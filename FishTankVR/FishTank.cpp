@@ -38,12 +38,15 @@ void FishTank::setInitialFrustum(float l, float r, float b, float t, float n, fl
 
 void FishTank::setFrustum( Vector3 eyepos )
 {
-	float newL = (l*aspectRatio - eyepos.x*n)/eyepos.z;
-	float newR = (r*aspectRatio - eyepos.x*n)/eyepos.z;
-	float newB =(b - eyepos.y*n)/eyepos.z;
-	float newT = (t - eyepos.y*n)/eyepos.z;
+	float newL = ((l*aspectRatio - eyepos.x)*n)/eyepos.z;
+	float newR = ((r*aspectRatio - eyepos.x)*n)/eyepos.z;
+	float newB =((b - eyepos.y)*n)/eyepos.z;
+	float newT = ((t - eyepos.y)*n)/eyepos.z;
 	float newN = n;
 	float newF = f;
+
+
+	printf("\neyepos(%0.2f,%0.2f,%0.2f) \nL %0.5f R %0.5f B %0.5f T %0.5f N %0.5f F %0.5f",eyepos.x, eyepos.y, eyepos.z, newL, newR, newB, newT, newN, newF); 
 
 
 
