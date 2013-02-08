@@ -67,7 +67,7 @@ Vec3f HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, fl
 	Vec3f eyepos(0,0,0);
 
 	float x =  bb.x+bb.w/2 - videoW/2;
-	float y =  bb.y+bb.h/2 - videoH/2;
+	float y =  bb.y+bb.h/3.0f - videoH/2;
 
 
 	eyepos[0] = -remap(x, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);

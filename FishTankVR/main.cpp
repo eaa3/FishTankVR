@@ -3,6 +3,8 @@
 #include "HeadTracker.h"
 #include "FishTank.h"
 #include <GL/glext.h>
+#include <cstdlib>
+#include <math.h>
 
 using namespace cv;
 using namespace tld;
@@ -17,21 +19,33 @@ FishTank ft;
 
 float W = 640.0f;
 float H = 480.0f;
-float realW = 0.5761f;//0.02f;//57.61f;
-float realH = 0.375f;//0.02f;//37.5f;
+float realW = 0.5;//0.5761f;//0.02f;//57.61f;
+float realH = 0.5;//0.375f;//0.02f;//37.5f;
+float aspectRatio = 16.0f/9.0f;
 float angle = 0;
 Vector3 eyepos;
 GLfloat size = 0.053f;//5.0f;
 
 GLuint tex1, tex2, tex3, tex4;
-bool activated = true;
+bool activated = false;
+
+
 
 float estimator(const BoundingBox& bb){
 
 	float a1 = bb.w*bb.h;
+	float pi = atanf(1.0f)*4;
+	float radiansPerPixel = (0.484f*2/W);
 
+	float alpha = (bb.w*radiansPerPixel)/2;
 
-	return float(ht.originalBB.getArea())/a1;
+	//float h = 0.59f*(320.0f*0.15f)/(bb.w*0.31f);
+	float h = 0.15f/(2*tanf(alpha));
+	float h2 = 0.59f*(320.0f*0.15f)/(bb.w*0.31f);
+
+	printf("\nRadiansPP = %0.2f PI = %0.2f ALPHA = %0.2f OTHER_H = %.2f ERROR = %.2f\n", radiansPerPixel, pi, alpha, h2, (h-h2));
+	return h;
+	//return sqrtf(float(ht.originalBB.getArea())/a1);
 
 	//return -0.3756*bb.w + 126.73;
 }
@@ -81,10 +95,10 @@ void init()
 
 		ht.init(frame);
 
-	}while( !ht.isInited() );
+	}while( !ht.isInited() && activated );
 
 
-	ft.setInitialFrustum(-realW/2,realW/2,-realH/2,realH/2,0.01f,200, 1);
+	ft.setInitialFrustum(-realW/2,realW/2,-realH/2,realH/2,0.01f,200, aspectRatio);
 
 	glEnable(GL_DEPTH_TEST);
 
@@ -103,6 +117,15 @@ void init()
 
 }
 
+void deinit(void)
+{
+	glDeleteTextures(1,&tex1);
+	glDeleteTextures(1,&tex2);
+	glDeleteTextures(1,&tex3);
+	glDeleteTextures(1,&tex4);
+}
+
+
 void drawQuad(float angle, Vec3f t, Vec3f rot_axis, Vec4f color = Vec4f(0.8f,0.8f,0.8f,0.5f), GLuint texture_id = 0)
 {
 	glPushMatrix();
@@ -118,16 +141,16 @@ void drawQuad(float angle, Vec3f t, Vec3f rot_axis, Vec4f color = Vec4f(0.8f,0.8
 	glBegin(GL_QUADS);
 	{
 		glTexCoord2i(0,0);
-		glVertex3f(ft.l, ft.t, 0);
+		glVertex3f(ft.l*aspectRatio, ft.t, 0);
 
 		glTexCoord2i(1,0);
-		glVertex3f(ft.r, ft.t, 0);
+		glVertex3f(ft.r*aspectRatio, ft.t, 0);
 
 		glTexCoord2i(1,1);
-		glVertex3f(ft.r, ft.b, 0);
+		glVertex3f(ft.r*aspectRatio, ft.b, 0);
 
 		glTexCoord2i(0,1);
-		glVertex3f(ft.l, ft.b, 0);
+		glVertex3f(ft.l*aspectRatio, ft.b, 0);
 		
 		
 		
@@ -186,24 +209,41 @@ void drawBorderedTeapot(float size, Vec3f pos, Vec4f color, Vec4f border_color)
 
 void display()
 {
+	//glViewport(320,240,320,240);
 	glClear (GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
 	cap >> frame;
 
 	BoundingBox bb = ht.track(frame);
+
 	draw_box(bb,frame,Scalar(255,0,0));
-	imshow("lol",frame);
+	line(frame, Point2i(W/2,0), Point2i(W/2,H), Scalar(255,255,0), 2);
+
+	line(frame, Point2i(0,H/2), Point2i(W,H/2), Scalar(255,255,0), 2);
+
+	float x =  bb.x+bb.w/2;
+	float y =  bb.y+bb.h/3.0f;
+
+	circle(frame, Point2f(x,y), 5, Scalar(0,255,0), 2);
+
+	imshow("Test - FTVR",frame);
 
 	if( bb.valid && activated){
 
+		if( !ht.isInited() ) {
+			ht.init(frame);
+		}else{
+			
+
 		Vec3f v = ht.estimateSpacePosition(bb,W,realW,H,realH,estimator);
-		v[1] += realH*0.4f;
+		v[1] += realH*0.3f;
 
 		//v[0] = v[0]/(realW/2);
 		//v[1] = v[1]/(realH/2);
 		//v[2] = v[2]/100;
 
-		eyepos = Vector3(v[0],v[1],v[2] );		
+		eyepos = Vector3(v[0]*aspectRatio,v[1],v[2] );
+		}
 
 	}
 
@@ -226,8 +266,8 @@ void display()
 
 
 	//glTranslatef(0,0, 1);
-	drawQuad(90, Vec3f(ft.r,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1); //right quad
-	drawQuad(90, Vec3f(ft.l,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1); //left quad
+	drawQuad(90, Vec3f(ft.r*aspectRatio,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1); //right quad
+	drawQuad(90, Vec3f(ft.l*aspectRatio,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1); //left quad
 	drawQuad(90, Vec3f(0,ft.b,0), Vec3f(1,0,0), Vec4f(1,1,1,1), tex2); // bottom quad
 	drawQuad(90, Vec3f(0,ft.t,0), Vec3f(1,0,0), Vec4f(1,1,1,1), tex3); // top quad
 	drawQuad(0, Vec3f(0,0, -0.25), Vec3f(1,0,0), Vec4f(1,1,1,1), tex4); // back quad
@@ -277,7 +317,8 @@ int main(int argc, char** argv)
 	glutCreateWindow ("Test");
 
 
-	init();	
+	init();
+	atexit(deinit);
 
 	glutDisplayFunc(display);
 
