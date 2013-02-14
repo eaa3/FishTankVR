@@ -32,10 +32,11 @@ public:
 
 	void reset();
 
-	BoundingBox track(Mat& frame);
-	Vec3f track(Mat& frame, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&));
+	BoundingBox track(Mat& frame, bool useOld = false);
+	Vec3f track(Mat& frame, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&), bool useOld = false);
 
-	Vec3f estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&));
+	Vec2f get2DEyePixelSpacePosition(const BoundingBox& bb, float x_rate = 0.25f, float y_rate = 0.4f);
+	Vec3f estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&), float x_rate = 0.25f, float y_rate = 0.4f);
 
 
 

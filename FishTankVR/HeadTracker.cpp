@@ -62,16 +62,30 @@ bool HeadTracker::isInited()
 	return this->inited;
 }
 
-Vec3f HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&))
+Vec2f HeadTracker::get2DEyePixelSpacePosition(const BoundingBox& bb, float x_rate, float y_rate)
+{
+
+	Vec2f eyepos(0,0);
+
+	float x =  bb.x + bb.w*x_rate;
+	float y =  bb.y + bb.h*y_rate;
+
+	eyepos[0] = x;
+	eyepos[1] = y;
+
+	return eyepos;
+
+}
+
+Vec3f HeadTracker::estimateSpacePosition(const BoundingBox& bb, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&), float x_rate, float y_rate)
 {
 	Vec3f eyepos(0,0,0);
 
-	float x =  bb.x+bb.w/2 - videoW/2;
-	float y =  bb.y+bb.h/3.0f - videoH/2;
+	Vec2f eyepos2DPixelSpace = this->get2DEyePixelSpacePosition(bb);
 
 
-	eyepos[0] = -remap(x, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);
-	eyepos[1] = -remap(y, -videoH/2, -realVideoH/2, videoH/2, realVideoH/2);
+	eyepos[0] = -remap(eyepos2DPixelSpace[0] - videoW/2, -videoW/2, -realVideoW/2, videoW/2, realVideoW/2);
+	eyepos[1] = -remap(eyepos2DPixelSpace[1] - videoH/2, -videoH/2, -realVideoH/2, videoH/2, realVideoH/2);
 
 	eyepos[2] = zestimator(bb);
 
@@ -86,9 +100,16 @@ void HeadTracker::reset()
 
 }
 
-BoundingBox HeadTracker::track(Mat& frame)
+BoundingBox HeadTracker::track(Mat& frame, bool useOld)
 {
 	BoundingBox trackedBB;
+
+	if( useOld && this->inited )
+	{
+		trackedBB = this->p->currBB;
+
+		return trackedBB;
+	}
 
 
 	if( this->inited )
@@ -128,12 +149,11 @@ BoundingBox HeadTracker::track(Mat& frame)
 	return trackedBB;
 }
 
-Vec3f HeadTracker::track(Mat& frame, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&))
+Vec3f HeadTracker::track(Mat& frame, float videoW, float realVideoW, float videoH, float realVideoH, float (*zestimator)(const BoundingBox&), bool useOld)
 {
-	BoundingBox bb = this->track(frame);
+	BoundingBox bb = this->track(frame, useOld);
 
 	Vec3f position = this->estimateSpacePosition(bb, videoW, realVideoW, videoH, realVideoH, zestimator);
-
 
 	return position;
 }
