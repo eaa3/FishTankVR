@@ -23,14 +23,14 @@ float realW = 0.275f; //0.4761f;//0.02f;//57.61f;
 float realH = 0.275f; //0.02f;//37.5f;
 float aspectRatio = 16.0f/9.0f;
 float angle = 0;
-Vec3f eyepos;
+Vector3 eyepos;
 GLfloat size = 0.053f;//5.0f;
 
 GLuint tex1, tex2, tex3, tex4, tex5;
 bool activated = false;
 bool fullScreen = false;
 
-void setFishTankVRPerspective( Vec3f eyepos = Vec3f(0,0,0.5) )
+void setFishTankVRPerspective( Vector3 eyepos = Vector3(0,0,0.5) )
 {
 	//Setting up Fish Tank VR Frustum and Camera Extrinsic Params
 	ft.setFrustum( eyepos );
@@ -238,6 +238,14 @@ void init()
 
 	setFishTankVRPerspective();
 
+	/*
+	glEnable( GL_CLIP_PLANE1 );
+	Vec3f p(0, ft.t, 0);
+	Vec3f n(0,1,0);
+
+	double equation[] = { 0, -1, 0, ft.t };
+	glClipPlane( GL_CLIP_PLANE1, equation);
+	*/
 	//eyepos = Vector3(0,0,34.9f);
 
 
@@ -272,7 +280,7 @@ void display()
 	line(frame, Point2i(0,H/2), Point2i(W,H/2), Scalar(255,255,0), 2);
 
 	//Drawing detected eye estimated position inside bounding box surrounding user's head
-	Vec2f eye2D = ht.get2DEyePixelSpacePosition(bb);
+	Vec2f eye2D = ht.get2DEyePixelSpacePosition(bb, 0.3f);
 	Point2f eye2DPosPixelSpace(eye2D);
 
 	circle(frame, eye2DPosPixelSpace , 5, Scalar(0,255,0), 2);
@@ -287,10 +295,10 @@ void display()
 
 		}else if ( bb.valid ) {			
 
-		Vec3f v = ht.estimateSpacePosition(bb,W,realW,H,realH,estimator);
-		v[1] += realH*0.4f;
+		Vec3f v = ht.estimateSpacePosition(bb,W,realW,H,realH,estimator, 0.3f);
+		v[1] += realH*0.25f;
 
-		eyepos = Vec3f(v[0]*aspectRatio,v[1],v[2] );
+		eyepos = Vector3(v[0]*aspectRatio,v[1],v[2] );
 		
 		setFishTankVRPerspective( eyepos );
 		}
@@ -304,8 +312,8 @@ void display()
 
 	drawQuad(90, Vec3f(ft.r*aspectRatio,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1, realW, realH, aspectRatio); //right quad
 	drawQuad(90, Vec3f(ft.l*aspectRatio,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1, realW, realH, aspectRatio); //left quad
-	drawQuad(90, Vec3f(0,ft.b,0), Vec3f(1,0,0), Vec4f(1,1,1,1), tex2, realW, realH, aspectRatio); // bottom quad
-	drawQuad(90, Vec3f(0,ft.t,0), Vec3f(1,0,0), Vec4f(1,1,1,1), tex3, realW, realH, aspectRatio); // top quad
+	drawQuad(90, Vec3f(0,ft.b,0), Vec3f(1,0,0), Vec4f(1,1,1,1), tex2, realW, 1, aspectRatio); // bottom quad
+	drawQuad(90, Vec3f(0,ft.t,-0.20f), Vec3f(1,0,0), Vec4f(1,1,1,1), tex3, realW, 1, aspectRatio); // top quad
 	drawQuad(0, Vec3f(0,0,-0.25), Vec3f(1,0,0), Vec4f(1,1,1,1), tex4, realW, realH, aspectRatio); // back quad
 
 

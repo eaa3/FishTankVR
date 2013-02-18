@@ -36,7 +36,7 @@ void FishTank::setInitialFrustum(float l, float r, float b, float t, float n, fl
 }
 
 
-void FishTank::setFrustum( Vec3f eyepos )
+void FishTank::setFrustum( Vector3 eyepos )
 {
 	float newL = ((l*aspectRatio - eyepos[0])*n)/eyepos[2];
 	float newR = ((r*aspectRatio - eyepos[0])*n)/eyepos[2];
@@ -65,10 +65,8 @@ void FishTank::setFrustum( Vec3f eyepos )
 
 }
 
-void FishTank::setView( Vec3f eyep )
+void FishTank::setView( Vector3 eyepos )
 {
-	Vector3 eyepos = Vector3(eyep[0], eyep[1], eyep[2] );
-
 	Vector3 target(eyepos.x,eyepos.y,0);
 
 	Vector3 forward = target - eyepos;

@@ -2,9 +2,6 @@
 
 #include "Matrices.h"
 #include "Vectors.h"
-#include "cv/opencv2/core/core.hpp"
-
-using namespace cv;
 
 class FishTank
 {
@@ -20,8 +17,8 @@ public:
 	FishTank();
 
 	void setInitialFrustum(float l, float r, float b, float t, float n, float f, float aspectRatio);
-	void setFrustum( Vec3f eyep );
-	void setView( Vec3f eyep );
+	void setFrustum( Vector3 eyepos );
+	void setView( Vector3 eyepos );
 
 
 	~FishTank(void);
