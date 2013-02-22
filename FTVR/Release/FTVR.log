@@ -1,0 +1,45 @@
+﻿Build started 22/02/2013 11:24:54.
+     1>Project "E:\Workspace\FishTankVR\FTVR\FTVR.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\FTVR.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Release\FTVR.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D FTVR_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt FishTank.cpp Matrices.cpp
+         FishTank.cpp
+     1>FishTank.cpp(5): warning C4273: 'FishTank::FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(26) : see previous definition of '{ctor}'
+     1>FishTank.cpp(14): warning C4273: 'FishTank::FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(27) : see previous definition of '{ctor}'
+     1>FishTank.cpp(19): warning C4273: 'FishTank::FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(28) : see previous definition of '{ctor}'
+     1>FishTank.cpp(28): warning C4273: 'FishTank::~FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(39) : see previous definition of '{dtor}'
+     1>FishTank.cpp(33): warning C4273: 'FishTank::setInitialFrustum' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(30) : see previous definition of 'setInitialFrustum'
+     1>FishTank.cpp(44): warning C4273: 'FishTank::setInitialFrustum' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(31) : see previous definition of 'setInitialFrustum'
+     1>FishTank.cpp(54): warning C4273: 'FishTank::setFrustum' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(33) : see previous definition of 'setFrustum'
+     1>FishTank.cpp(83): warning C4273: 'FishTank::setView' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(34) : see previous definition of 'setView'
+     1>FishTank.cpp(112): warning C4273: 'FishTank::setAll' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\FishTank.h(36) : see previous definition of 'setAll'
+         Matrices.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Release\FTVR.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\FTVR.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Release\FTVR.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Release\FTVR.lib" /MACHINE:X86 /DLL Release\FishTank.obj
+         Release\Matrices.obj
+            Creating library E:\Workspace\FishTankVR\Release\FTVR.lib and object E:\Workspace\FishTankVR\Release\FTVR.exp
+         Generating code
+         Finished generating code
+         FTVR.vcxproj -> E:\Workspace\FishTankVR\Release\FTVR.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Workspace\FishTankVR\Release\FTVR.dll;#2" /manifest Release\FTVR.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\FTVR.unsuccessfulbuild".
+         Touching "Release\FTVR.lastbuildstate".
+     1>Done Building Project "E:\Workspace\FishTankVR\FTVR\FTVR.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.89

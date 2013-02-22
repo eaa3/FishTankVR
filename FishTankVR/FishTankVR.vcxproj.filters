@@ -107,12 +107,6 @@
     <ClCompile Include="HeadTracker.cpp">
       <Filter>FishTank\source\head-tracker\source</Filter>
     </ClCompile>
-    <ClCompile Include="FishTank.cpp">
-      <Filter>FishTank\source</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrices.cpp">
-      <Filter>FishTank\source</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tld\mftracker\bb.h">
@@ -175,23 +169,11 @@
     <ClInclude Include="tld\twobitbp.h">
       <Filter>tld\inc</Filter>
     </ClInclude>
-    <ClInclude Include="head-tracker\AdaboostDetector.h">
-      <Filter>FishTank\source\head-tracker\inc</Filter>
-    </ClInclude>
     <ClInclude Include="head-tracker\FaceDetector.h">
       <Filter>FishTank\source\head-tracker\inc</Filter>
     </ClInclude>
     <ClInclude Include="HeadTracker.h">
       <Filter>FishTank\source\head-tracker\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="FishTank.h">
-      <Filter>FishTank\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Matrices.h">
-      <Filter>FishTank\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Vectors.h">
-      <Filter>FishTank\inc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
