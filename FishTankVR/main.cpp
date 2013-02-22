@@ -19,7 +19,7 @@ FishTank ft;
 
 float W = 640.0f;
 float H = 480.0f;
-float realW = 0.275f; //0.4761f;//0.02f;//57.61f;
+float realW = 0.4761f; //0.4761f;//0.02f;//57.61f;
 float realH = 0.275f; //0.02f;//37.5f;
 float aspectRatio = 16.0f/9.0f;
 float angle = 0;
@@ -118,11 +118,11 @@ GLuint loadTexture(string filename)
 	return texture_id;
 }
 
-void drawQuad(float angle, Vec3f t, Vec3f rot_axis, Vec4f color = Vec4f(0.8f,0.8f,0.8f,0.5f), GLuint texture_id = 0, float w = 1, float h = 1, float aspectRatio = 1)
+void drawQuad(float angle, Vec3f trans, Vec3f rot_axis, Vec4f color = Vec4f(0.8f,0.8f,0.8f,0.5f), GLuint texture_id = 0, float w = 1, float h = 1, float aspectRatio = 1)
 {
 	glPushMatrix();
 	glColor4f(color[0],color[1], color[2], color[3]);
-	glTranslatef(t[0], t[1], t[2]);
+	glTranslatef(trans[0], trans[1], trans[2]);
 	glRotatef(angle, rot_axis[0],rot_axis[1],rot_axis[2]);
 
 
@@ -130,24 +130,24 @@ void drawQuad(float angle, Vec3f t, Vec3f rot_axis, Vec4f color = Vec4f(0.8f,0.8
 
 	glBindTexture(GL_TEXTURE_2D, texture_id);
 
-	float left = -w/2;
-	float right = w/2;
-	float top = h/2;
-	float bottom = -h/2;
+	float l = -w/2;
+	float r = w/2;
+	float t = h/2;
+	float b = -h/2;
 
 	glBegin(GL_QUADS);
 	{
 		glTexCoord2i(0,0);
-		glVertex3f(left*aspectRatio, top, 0);
+		glVertex3f(l, t, 0);
 
 		glTexCoord2i(1,0);
-		glVertex3f(right*aspectRatio, top, 0);
+		glVertex3f(r, t, 0);
 
 		glTexCoord2i(1,1);
-		glVertex3f(right*aspectRatio, bottom, 0);
+		glVertex3f(r, b, 0);
 
 		glTexCoord2i(0,1);
-		glVertex3f(left*aspectRatio, bottom, 0);
+		glVertex3f(l, b, 0);
 		
 		
 		
@@ -218,7 +218,7 @@ void init()
 	}while( !ht.isInited() && activated );
 
 
-	ft.setInitialFrustum(-realW/2,realW/2,-realH/2,realH/2,0.01f,200, aspectRatio);
+	ft.setInitialFrustum(realW,realH);
 
 	glEnable(GL_DEPTH_TEST);
 
@@ -287,6 +287,7 @@ void display()
 
 	imshow("VoxarLabs - FTVR Eye Seeker",frame);
 
+	
 	if(activated){
 
 		if( !ht.isInited() ) {
@@ -295,7 +296,7 @@ void display()
 
 		}else if ( bb.valid ) {			
 
-		Vec3f v = ht.estimateSpacePosition(bb,W,realW,H,realH,estimator, 0.3f);
+		Vec3f v = ht.estimateSpacePosition(bb,W,realH*1.1f,H,realH,estimator, 0.3f);
 		v[1] += realH*0.25f;
 
 		eyepos = Vector3(v[0]*aspectRatio,v[1],v[2] );
@@ -309,9 +310,9 @@ void display()
 		drawQuad(0, Vec3f(-0.10f,0.05f,0.0f), Vec3f(1,0,0), Vec4f(1,1,1,1), tex5, 0.10, 0.10, aspectRatio); // front quad
 	}
 
-
-	drawQuad(90, Vec3f(ft.r*aspectRatio,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1, realW, realH, aspectRatio); //right quad
-	drawQuad(90, Vec3f(ft.l*aspectRatio,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1, realW, realH, aspectRatio); //left quad
+	float k = 1.0f;
+	drawQuad(90, Vec3f(ft.r*k,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1, realW, realH, aspectRatio); //right quad
+	drawQuad(90, Vec3f(ft.l*k,0,0), Vec3f(0,1,0), Vec4f(1,1,1,1), tex1, realW, realH, aspectRatio); //left quad
 	drawQuad(90, Vec3f(0,ft.b,0), Vec3f(1,0,0), Vec4f(1,1,1,1), tex2, realW, 1, aspectRatio); // bottom quad
 	drawQuad(90, Vec3f(0,ft.t,-0.20f), Vec3f(1,0,0), Vec4f(1,1,1,1), tex3, realW, 1, aspectRatio); // top quad
 	drawQuad(0, Vec3f(0,0,-0.25), Vec3f(1,0,0), Vec4f(1,1,1,1), tex4, realW, realH, aspectRatio); // back quad

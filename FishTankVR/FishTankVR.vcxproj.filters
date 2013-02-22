@@ -21,15 +21,6 @@
     <Filter Include="tld\source">
       <UniqueIdentifier>{82728960-8cfc-41d3-b2ed-5c029d24693e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="head-tracker">
-      <UniqueIdentifier>{1c9d5838-b1c0-4957-9150-1c4b2cfecab3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="head-tracker\inc">
-      <UniqueIdentifier>{716066f0-f476-488f-b2fd-cda3f347b791}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="head-tracker\source">
-      <UniqueIdentifier>{1b6a3306-208a-4c16-80c4-d4c1b5ce6817}</UniqueIdentifier>
-    </Filter>
     <Filter Include="FishTank">
       <UniqueIdentifier>{fc0692bf-6a07-4bd2-8ba7-61b77899e470}</UniqueIdentifier>
     </Filter>
@@ -38,6 +29,15 @@
     </Filter>
     <Filter Include="FishTank\source">
       <UniqueIdentifier>{e9446f6a-0891-4dd9-b25e-457803f21d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FishTank\source\head-tracker">
+      <UniqueIdentifier>{1c9d5838-b1c0-4957-9150-1c4b2cfecab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FishTank\source\head-tracker\inc">
+      <UniqueIdentifier>{716066f0-f476-488f-b2fd-cda3f347b791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FishTank\source\head-tracker\source">
+      <UniqueIdentifier>{1b6a3306-208a-4c16-80c4-d4c1b5ce6817}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -102,10 +102,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="head-tracker\FaceDetector.cpp">
-      <Filter>head-tracker\source</Filter>
+      <Filter>FishTank\source\head-tracker\source</Filter>
     </ClCompile>
     <ClCompile Include="HeadTracker.cpp">
-      <Filter>head-tracker\source</Filter>
+      <Filter>FishTank\source\head-tracker\source</Filter>
     </ClCompile>
     <ClCompile Include="FishTank.cpp">
       <Filter>FishTank\source</Filter>
@@ -176,13 +176,13 @@
       <Filter>tld\inc</Filter>
     </ClInclude>
     <ClInclude Include="head-tracker\AdaboostDetector.h">
-      <Filter>head-tracker\inc</Filter>
+      <Filter>FishTank\source\head-tracker\inc</Filter>
     </ClInclude>
     <ClInclude Include="head-tracker\FaceDetector.h">
-      <Filter>head-tracker\inc</Filter>
+      <Filter>FishTank\source\head-tracker\inc</Filter>
     </ClInclude>
     <ClInclude Include="HeadTracker.h">
-      <Filter>head-tracker\inc</Filter>
+      <Filter>FishTank\source\head-tracker\inc</Filter>
     </ClInclude>
     <ClInclude Include="FishTank.h">
       <Filter>FishTank\inc</Filter>

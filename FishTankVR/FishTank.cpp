@@ -1,13 +1,18 @@
 #include "FishTank.h"
 
 
-FishTank::FishTank(float l, float r, float b, float t, float n, float f, float aspectRatio)
+FishTank::FishTank(float l, float r, float b, float t, float n, float f)
 {
 
 	
-	this->setInitialFrustum(l,r,b,t,n,f,aspectRatio);
+	this->setInitialFrustum(l,r,b,t,n,f);
 
 
+}
+
+FishTank::FishTank(float realW, float realH, float n , float f )
+{
+	this->setInitialFrustum(realW,realH,n,f);
 }
 
 FishTank::FishTank()
@@ -24,7 +29,7 @@ FishTank::~FishTank(void)
 }
 
 
-void FishTank::setInitialFrustum(float l, float r, float b, float t, float n, float f, float aspectRatio)
+void FishTank::setInitialFrustum(float l, float r, float b, float t, float n, float f)
 {
 	this->l = l;
 	this->r = r;
@@ -32,14 +37,23 @@ void FishTank::setInitialFrustum(float l, float r, float b, float t, float n, fl
 	this->t = t;
 	this->n = n;
 	this->f = f;
-	this->aspectRatio = aspectRatio;
+
 }
+
+void FishTank::setInitialFrustum(float realW, float realH, float n, float f  )
+{
+	this->setInitialFrustum( -realW/2, realW/2, -realH/2, realH/2, n, f);
+	this->aspectRatio = realW/realH;
+}
+
+
+
 
 
 void FishTank::setFrustum( Vector3 eyepos )
 {
-	float newL = ((l*aspectRatio - eyepos[0])*n)/eyepos[2];
-	float newR = ((r*aspectRatio - eyepos[0])*n)/eyepos[2];
+	float newL = ((l - eyepos[0])*n)/eyepos[2];
+	float newR = ((r - eyepos[0])*n)/eyepos[2];
 	float newB =((b - eyepos[1])*n)/eyepos[2];
 	float newT = ((t - eyepos[1])*n)/eyepos[2];
 	float newN = n;
@@ -73,15 +87,15 @@ void FishTank::setView( Vector3 eyepos )
 	forward.normalize();
 
 	Vector3 up(0,1,0);
-	Vector3 left = forward.cross(up);
-	left.normalize();
+	Vector3 l = forward.cross(up);
+	l.normalize();
 
-	up = left.cross(forward);
+	up = l.cross(forward);
 	up.normalize();
 
 	this->rt = Matrix4(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
-	this->rt.setColumn(0, left);
+	this->rt.setColumn(0, l);
     this->rt.setColumn(1, up);
     this->rt.setColumn(2, -forward);
 
@@ -92,4 +106,10 @@ void FishTank::setView( Vector3 eyepos )
 
 	this->rt[15] = 1;
 
+}
+
+void FishTank::setAll( Vector3 eyepos )
+{
+	this->setFrustum(eyepos);
+	this->setView(eyepos);
 }
