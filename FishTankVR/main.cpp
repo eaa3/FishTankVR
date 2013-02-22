@@ -2,7 +2,10 @@
 #include <opencv2/opencv.hpp>
 #include "HeadTracker.h"
 #include "FishTank.h"
+#include <Windows.h>
+#include <gl/GL.h>
 #include <GL/glext.h>
+#include "glut.h"
 #include <cstdlib>
 #include <math.h>
 

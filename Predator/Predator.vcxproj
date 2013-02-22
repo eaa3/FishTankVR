@@ -11,37 +11,66 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="head-tracker\FaceDetector.cpp" />
-    <ClCompile Include="HeadTracker.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="tld\boundingbox.h" />
+    <ClInclude Include="tld\clusterer.h" />
+    <ClInclude Include="tld\detector.h" />
+    <ClInclude Include="tld\disjointset.h" />
+    <ClInclude Include="tld\feature.h" />
+    <ClInclude Include="tld\fern.h" />
+    <ClInclude Include="tld\ffclassifier.h" />
+    <ClInclude Include="tld\includes.h" />
+    <ClInclude Include="tld\MedianFlowTracker.h" />
+    <ClInclude Include="tld\mftracker\bb.h" />
+    <ClInclude Include="tld\mftracker\bb_predict.h" />
+    <ClInclude Include="tld\mftracker\fbtrack.h" />
+    <ClInclude Include="tld\mftracker\lk.h" />
+    <ClInclude Include="tld\mftracker\median.h" />
+    <ClInclude Include="tld\nnclassifier.h" />
+    <ClInclude Include="tld\normalizedpatch.h" />
+    <ClInclude Include="tld\params.h" />
+    <ClInclude Include="tld\Predator.h" />
+    <ClInclude Include="tld\tld_util.h" />
+    <ClInclude Include="tld\twobitbp.h" />
+    <ClInclude Include="tld\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="head-tracker\FaceDetector.h" />
-    <ClInclude Include="HeadTracker.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FTVR\FTVR.vcxproj">
-      <Project>{1982b59e-dc86-4998-8289-529cd2be95cb}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Predator\Predator.vcxproj">
-      <Project>{7ac282f6-85e6-476a-83b5-6b3aab476388}</Project>
-    </ProjectReference>
+    <ClCompile Include="tld\boundingbox.cpp" />
+    <ClCompile Include="tld\clusterer.cpp" />
+    <ClCompile Include="tld\detector.cpp" />
+    <ClCompile Include="tld\disjointset.cpp" />
+    <ClCompile Include="tld\feature.cpp" />
+    <ClCompile Include="tld\fern.cpp" />
+    <ClCompile Include="tld\ffclassifier.cpp" />
+    <ClCompile Include="tld\MedianFlowTracker.cpp" />
+    <ClCompile Include="tld\mftracker\bb.cpp" />
+    <ClCompile Include="tld\mftracker\bb_predict.cpp" />
+    <ClCompile Include="tld\mftracker\fbtrack.cpp" />
+    <ClCompile Include="tld\mftracker\lk.cpp" />
+    <ClCompile Include="tld\mftracker\median.cpp" />
+    <ClCompile Include="tld\nnclassifier.cpp" />
+    <ClCompile Include="tld\normalizedpatch.cpp" />
+    <ClCompile Include="tld\params.cpp" />
+    <ClCompile Include="tld\Predator.cpp" />
+    <ClCompile Include="tld\tld_util.cpp" />
+    <ClCompile Include="tld\twobitbp.cpp" />
+    <ClCompile Include="tld\Vector3.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6918ED01-CC70-4A84-8D5F-95014F057047}</ProjectGuid>
-    <RootNamespace>FishTankVR</RootNamespace>
+    <ProjectGuid>{7AC282F6-85E6-476A-83B5-6B3AAB476388}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Predator</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -54,37 +83,42 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)\head-tracker;$(ProjectDir);$(ProjectDir)\cv;$(ProjectDir)\glut;$(ProjectDir)\tld\mftracker;$(ProjectDir)\tld;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)\cv\bin\x86\vc10\lib;$(ProjectDir)\glut;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PREDATOR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_calib3d242d.lib;opencv_contrib242d.lib;opencv_core242d.lib;opencv_features2d242d.lib;opencv_flann242d.lib;opencv_gpu242d.lib;opencv_haartraining_engined.lib;opencv_highgui242d.lib;opencv_imgproc242d.lib;opencv_legacy242d.lib;opencv_ml242d.lib;opencv_nonfree242d.lib;opencv_objdetect242d.lib;opencv_photo242d.lib;opencv_stitching242d.lib;opencv_ts242d.lib;opencv_video242d.lib;opencv_videostab242d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>E:\Workspace\FishTankVR\Predator\tld;E:\Workspace\FishTankVR\FTVR;$(ProjectDir)\tld;$(ProjectDir)\glut;$(ProjectDir)\cv;$(ProjectDir);$(ProjectDir)\tld\mftracker;$(ProjectDir)\head-tracker;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PREDATOR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Workspace\FishTankVR\Predator\tld\mftracker;E:\Workspace\FishTankVR\FishTankVR\cv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>E:\Workspace\FishTankVR\FishTankVR\cv\bin\x86\vc10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_calib3d242.lib;opencv_contrib242.lib;opencv_core242.lib;opencv_features2d242.lib;opencv_flann242.lib;opencv_gpu242.lib;opencv_haartraining_engine.lib;opencv_highgui242.lib;opencv_imgproc242.lib;opencv_legacy242.lib;opencv_ml242.lib;opencv_nonfree242.lib;opencv_objdetect242.lib;opencv_photo242.lib;opencv_stitching242.lib;opencv_ts242.lib;opencv_video242.lib;opencv_videostab242.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)\cv\bin\x86\vc10\lib;$(ProjectDir)\glut;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

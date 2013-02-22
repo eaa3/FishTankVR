@@ -1,6 +1,12 @@
 #ifndef PREDATOR_H
 #define PREDATOR_H
 
+#ifdef MATHFUNCSDLL_EXPORTS
+#define MATHFUNCSDLL_API __declspec(dllexport) 
+#else
+#define MATHFUNCSDLL_API __declspec(dllimport) 
+#endif
+
 #include "includes.h"
 #include "MedianFlowTracker.h"
 #include "detector.h"
@@ -34,10 +40,10 @@ public:
     BoundingBox detectedBB;
     BoundingBox trackedBB;
 
-    void storeData(); //done
-    void fuseHypotheses();
-    void learn();
-    void initialLearning();
+    MATHFUNCSDLL_API void storeData(); //done
+    MATHFUNCSDLL_API void fuseHypotheses();
+    MATHFUNCSDLL_API void learn();
+    MATHFUNCSDLL_API void initialLearning();
 
 
     bool initialized;
@@ -54,16 +60,16 @@ public:
 
 
 
-    Predator(string paramsFile); //done
-    Predator(Params* params); //done
-    virtual ~Predator(); //done
+    MATHFUNCSDLL_API Predator(string paramsFile); //done
+    MATHFUNCSDLL_API Predator(Params* params); //done
+    MATHFUNCSDLL_API ~Predator(); //done
 
-    void init(); //done
-    void release(); // done
-    void reset(); // done
+    MATHFUNCSDLL_API void init(); //done
+    MATHFUNCSDLL_API void release(); // done
+    MATHFUNCSDLL_API void reset(); // done
 
-    void selectObject(Mat& img, BoundingBox& bb); //done
-    void processFrame(Mat& img); // done
+    MATHFUNCSDLL_API void selectObject(Mat& img, BoundingBox& bb); //done
+    MATHFUNCSDLL_API void processFrame(Mat& img); // done
 
 
 };

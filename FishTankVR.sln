@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FishTankVR", "FishTankVR\Fi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FTVR", "FTVR\FTVR.vcxproj", "{1982B59E-DC86-4998-8289-529CD2BE95CB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Predator", "Predator\Predator.vcxproj", "{7AC282F6-85E6-476A-83B5-6B3AAB476388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{1982B59E-DC86-4998-8289-529CD2BE95CB}.Debug|Win32.Build.0 = Debug|Win32
 		{1982B59E-DC86-4998-8289-529CD2BE95CB}.Release|Win32.ActiveCfg = Release|Win32
 		{1982B59E-DC86-4998-8289-529CD2BE95CB}.Release|Win32.Build.0 = Release|Win32
+		{7AC282F6-85E6-476A-83B5-6B3AAB476388}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7AC282F6-85E6-476A-83B5-6B3AAB476388}.Debug|Win32.Build.0 = Debug|Win32
+		{7AC282F6-85E6-476A-83B5-6B3AAB476388}.Release|Win32.ActiveCfg = Release|Win32
+		{7AC282F6-85E6-476A-83B5-6B3AAB476388}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

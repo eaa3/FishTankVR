@@ -9,18 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="tld">
-      <UniqueIdentifier>{c3d28f23-22e5-4dcd-801a-35cbfd15603c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="tld\mftracker">
-      <UniqueIdentifier>{590505cf-ccf1-4b35-b908-611387cad3fd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="tld\inc">
-      <UniqueIdentifier>{8f5554a7-4693-4f31-a3cf-b090dc317429}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="tld\source">
-      <UniqueIdentifier>{82728960-8cfc-41d3-b2ed-5c029d24693e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="FishTank">
       <UniqueIdentifier>{fc0692bf-6a07-4bd2-8ba7-61b77899e470}</UniqueIdentifier>
     </Filter>
@@ -41,63 +29,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tld\mftracker\bb.cpp">
-      <Filter>tld\mftracker</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\mftracker\bb_predict.cpp">
-      <Filter>tld\mftracker</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\mftracker\fbtrack.cpp">
-      <Filter>tld\mftracker</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\mftracker\lk.cpp">
-      <Filter>tld\mftracker</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\mftracker\median.cpp">
-      <Filter>tld\mftracker</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\boundingbox.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\clusterer.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\detector.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\disjointset.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\feature.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\fern.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\ffclassifier.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\MedianFlowTracker.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\nnclassifier.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\normalizedpatch.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\params.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\Predator.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\tld_util.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
-    <ClCompile Include="tld\twobitbp.cpp">
-      <Filter>tld\source</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -109,66 +40,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tld\mftracker\bb.h">
-      <Filter>tld\mftracker</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\mftracker\bb_predict.h">
-      <Filter>tld\mftracker</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\mftracker\fbtrack.h">
-      <Filter>tld\mftracker</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\mftracker\lk.h">
-      <Filter>tld\mftracker</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\mftracker\median.h">
-      <Filter>tld\mftracker</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\boundingbox.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\clusterer.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\detector.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\disjointset.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\feature.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\fern.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\ffclassifier.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\includes.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\MedianFlowTracker.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\nnclassifier.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\normalizedpatch.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\params.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\Predator.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\tld_util.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="tld\twobitbp.h">
-      <Filter>tld\inc</Filter>
-    </ClInclude>
     <ClInclude Include="head-tracker\FaceDetector.h">
       <Filter>FishTank\source\head-tracker\inc</Filter>
     </ClInclude>
