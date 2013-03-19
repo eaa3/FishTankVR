@@ -72,6 +72,8 @@ public:
     MATHFUNCSDLL_API void processFrame(Mat& img); // done
 
 
+
+
 };
 
 }

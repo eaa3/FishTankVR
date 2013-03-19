@@ -1,0 +1,452 @@
+﻿Build started 04/03/2013 16:35:21.
+     1>Project "E:\Workspace\FishTankVR\Predator\Predator.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\Predator.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\Predator.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IE:\Workspace\FishTankVR\Predator\tld\mftracker /IE:\Workspace\FishTankVR\FishTankVR\cv /IE:\Workspace\FishTankVR\Predator\tld /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PREDATOR_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt tld\boundingbox.cpp tld\clusterer.cpp tld\detector.cpp tld\disjointset.cpp tld\feature.cpp tld\fern.cpp tld\ffclassifier.cpp tld\MedianFlowTracker.cpp tld\mftracker\bb.cpp tld\mftracker\bb_predict.cpp tld\mftracker\fbtrack.cpp tld\mftracker\lk.cpp tld\mftracker\median.cpp tld\nnclassifier.cpp tld\normalizedpatch.cpp tld\params.cpp tld\Predator.cpp tld\tld_util.cpp tld\twobitbp.cpp tld\Vector3.cpp
+         Vector3.cpp
+         twobitbp.cpp
+         tld_util.cpp
+     1>e:\workspace\fishtankvr\predator\tld\tld_util.cpp(6): warning C4273: 'randomFloat' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\tld_util.h(14) : see previous definition of 'randomFloat'
+     1>e:\workspace\fishtankvr\predator\tld\tld_util.cpp(12): warning C4273: 'randomDouble' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\tld_util.h(15) : see previous definition of 'randomDouble'
+     1>e:\workspace\fishtankvr\predator\tld\tld_util.cpp(23): warning C4273: 'get_roi' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\tld_util.h(21) : see previous definition of 'get_roi'
+     1>e:\workspace\fishtankvr\predator\tld\tld_util.cpp(41): warning C4273: 'draw_box' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\tld_util.h(22) : see previous definition of 'draw_box'
+     1>e:\workspace\fishtankvr\predator\tld\tld_util.cpp(49): warning C4273: 'gtCompf' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\tld_util.h(18) : see previous definition of 'gtCompf'
+     1>e:\workspace\fishtankvr\predator\tld\tld_util.cpp(54): warning C4273: 'tldSortByOverlapDesc' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\tld_util.h(19) : see previous definition of 'tldSortByOverlapDesc'
+         Predator.cpp
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(9): warning C4273: 'tld::Predator::Predator' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(63) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(27): warning C4273: 'tld::Predator::Predator' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(64) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(45): warning C4273: 'tld::Predator::~Predator' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(65) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(55): warning C4273: 'tld::Predator::init' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(67) : see previous definition of 'init'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(61): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(61): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(74): warning C4273: 'tld::Predator::release' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(68) : see previous definition of 'release'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(87): warning C4273: 'tld::Predator::reset' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(69) : see previous definition of 'reset'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(96): warning C4273: 'tld::Predator::storeData' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(43) : see previous definition of 'storeData'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(108): warning C4273: 'tld::Predator::selectObject' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(71) : see previous definition of 'selectObject'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(114): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(115): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(138): warning C4273: 'tld::Predator::processFrame' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(72) : see previous definition of 'processFrame'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(179): warning C4273: 'tld::Predator::initialLearning' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(46) : see previous definition of 'initialLearning'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(196): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(247): warning C4273: 'tld::Predator::learn' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(45) : see previous definition of 'learn'
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(273): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\predator.cpp(345): warning C4273: 'tld::Predator::fuseHypotheses' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\predator.h(44) : see previous definition of 'fuseHypotheses'
+         params.cpp
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(15): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(16): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(17): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(20): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(21): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(22): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(23): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(24): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(27): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(28): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(31): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(34): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(37): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(38): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(39): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(40): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(41): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(44): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(45): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(76): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(77): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\params.cpp(97): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+         normalizedpatch.cpp
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(7): warning C4273: 'tld::NormalizedPatch::NormalizedPatch' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\normalizedpatch.h(27) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(12): warning C4273: 'tld::NormalizedPatch::NormalizedPatch' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\normalizedpatch.h(25) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(17): warning C4273: 'tld::NormalizedPatch::NormalizedPatch' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\normalizedpatch.h(26) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(23): warning C4273: 'tld::NormalizedPatch::release' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\normalizedpatch.h(29) : see previous definition of 'release'
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(28): warning C4273: 'tld::NormalizedPatch::~NormalizedPatch' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\normalizedpatch.h(30) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(33): warning C4273: 'tld::NormalizedPatch::extractNormalizedValues' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\normalizedpatch.h(34) : see previous definition of 'extractNormalizedValues'
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(65): warning C4273: 'tld::NormalizedPatch::ncc' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\normalizedpatch.h(32) : see previous definition of 'ncc'
+     1>e:\workspace\fishtankvr\predator\tld\normalizedpatch.cpp(82): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+         nnclassifier.cpp
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(7): warning C4273: 'tld::NNClassifier::NNClassifier' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\nnclassifier.h(30) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(13): warning C4273: 'tld::NNClassifier::~NNClassifier' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\nnclassifier.h(31) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(18): warning C4273: 'tld::NNClassifier::release' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\nnclassifier.h(42) : see previous definition of 'release'
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(25): warning C4273: 'tld::NNClassifier::classify' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\nnclassifier.h(34) : see previous definition of 'classify'
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(40): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(65): warning C4273: 'tld::NNClassifier::filter' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\nnclassifier.h(39) : see previous definition of 'filter'
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(74): warning C4273: 'tld::NNClassifier::learn' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\nnclassifier.h(37) : see previous definition of 'learn'
+     1>e:\workspace\fishtankvr\predator\tld\nnclassifier.cpp(77): warning C4018: '<' : signed/unsigned mismatch
+         median.cpp
+         lk.cpp
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\lk.cpp(244): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\lk.cpp(245): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\lk.cpp(246): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\lk.cpp(247): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+         fbtrack.cpp
+         bb_predict.cpp
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb_predict.cpp(103): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb_predict.cpp(104): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         bb.cpp
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb.cpp(82): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb.cpp(105): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb.cpp(124): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb.cpp(125): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb.cpp(155): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\mftracker\bb.cpp(156): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         MedianFlowTracker.cpp
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(50): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(50): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(50): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(50): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(60): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(61): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(62): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(63): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(69): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(69): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(69): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\medianflowtracker.cpp(69): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         ffclassifier.cpp
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(7): warning C4273: 'tld::FFClassifier::FFClassifier' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(28) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(19): warning C4273: 'tld::FFClassifier::~FFClassifier' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(29) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(25): warning C4273: 'tld::FFClassifier::init' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(38) : see previous definition of 'init'
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(28): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(32): warning C4273: 'tld::FFClassifier::release' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(39) : see previous definition of 'release'
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(33): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(42): warning C4273: 'tld::FFClassifier::train' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(32) : see previous definition of 'train'
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(49): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(58): warning C4273: 'tld::FFClassifier::classify' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(34) : see previous definition of 'classify'
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\ffclassifier.cpp(70): warning C4273: 'tld::FFClassifier::filter' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(36) : see previous definition of 'filter'
+         fern.cpp
+     1>e:\workspace\fishtankvr\predator\tld\fern.cpp(8): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\fern.cpp(26): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\fern.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+         feature.cpp
+     1>e:\workspace\fishtankvr\predator\tld\feature.cpp(7): warning C4273: 'tld::Feature::Feature' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\feature.h(21) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\feature.cpp(12): warning C4273: 'tld::Feature::Feature' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\feature.h(22) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\feature.cpp(26): warning C4273: 'tld::Feature::~Feature' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\feature.h(23) : see previous definition of '{dtor}'
+         disjointset.cpp
+     1>e:\workspace\fishtankvr\predator\tld\disjointset.cpp(7): warning C4273: 'tld::DisjointSet::DisjointSet' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\disjointset.h(22) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\disjointset.cpp(17): warning C4273: 'tld::DisjointSet::~DisjointSet' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\disjointset.h(23) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\predator\tld\disjointset.cpp(23): warning C4273: 'tld::DisjointSet::makeSet' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\disjointset.h(29) : see previous definition of 'makeSet'
+     1>e:\workspace\fishtankvr\predator\tld\disjointset.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\disjointset.cpp(33): warning C4273: 'tld::DisjointSet::unionSets' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\disjointset.h(30) : see previous definition of 'unionSets'
+     1>e:\workspace\fishtankvr\predator\tld\disjointset.cpp(38): warning C4273: 'tld::DisjointSet::linkSets' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\disjointset.h(31) : see previous definition of 'linkSets'
+     1>e:\workspace\fishtankvr\predator\tld\disjointset.cpp(60): warning C4273: 'tld::DisjointSet::findSet' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\disjointset.h(33) : see previous definition of 'findSet'
+         detector.cpp
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(7): warning C4273: 'tld::Detector::Detector' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\detector.h(46) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(28): warning C4273: 'tld::Detector::~Detector' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\detector.h(47) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(34): warning C4273: 'tld::Detector::release' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\detector.h(50) : see previous definition of 'release'
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(42): warning C4273: 'tld::Detector::init' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\detector.h(49) : see previous definition of 'init'
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(51): warning C4273: 'tld::Detector::initWindows' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\detector.h(42) : see previous definition of 'initWindows'
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(64): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(66): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(68): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(68): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(78): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(85): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(114): warning C4273: 'tld::Detector::detect' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\detector.h(53) : see previous definition of 'detect'
+     1>e:\workspace\fishtankvr\predator\tld\detector.cpp(120): warning C4018: '<' : signed/unsigned mismatch
+         clusterer.cpp
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(32): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(34): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(44): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(78): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(117): warning C4018: '>=' : signed/unsigned mismatch
+         boundingbox.cpp
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(8): warning C4273: 'tld::BoundingBox::BoundingBox' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(28) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(22): warning C4273: 'tld::BoundingBox::BoundingBox' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(29) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(36): warning C4273: 'tld::BoundingBox::BoundingBox' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(30) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(41): warning C4273: 'tld::BoundingBox::~BoundingBox' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(55) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(47): warning C4273: 'tld::BoundingBox::setX' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(32) : see previous definition of 'setX'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(53): warning C4273: 'tld::BoundingBox::setY' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(33) : see previous definition of 'setY'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(59): warning C4273: 'tld::BoundingBox::setXY' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(34) : see previous definition of 'setXY'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(68): warning C4273: 'tld::BoundingBox::setW' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(36) : see previous definition of 'setW'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(73): warning C4273: 'tld::BoundingBox::setH' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(37) : see previous definition of 'setH'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(78): warning C4273: 'tld::BoundingBox::setWH' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(38) : see previous definition of 'setWH'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(87): warning C4273: 'tld::BoundingBox::getArea' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(49) : see previous definition of 'getArea'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(92): warning C4273: 'tld::BoundingBox::getArea' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(50) : see previous definition of 'getArea'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(102): warning C4273: 'tld::BoundingBox::isOverlapping' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(40) : see previous definition of 'isOverlapping'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(110): warning C4273: 'tld::BoundingBox::isOverlapping' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(41) : see previous definition of 'isOverlapping'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(115): warning C4273: 'tld::BoundingBox::isInside' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(42) : see previous definition of 'isInside'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(120): warning C4273: 'tld::BoundingBox::isInside' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(43) : see previous definition of 'isInside'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(125): warning C4273: 'tld::BoundingBox::overlap' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(45) : see previous definition of 'overlap'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(142): warning C4273: 'tld::BoundingBox::overlap' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(46) : see previous definition of 'overlap'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(143): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(150): warning C4273: 'tld::BoundingBox::overlap' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(47) : see previous definition of 'overlap'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(151): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(158): warning C4273: 'tld::BoundingBox::extractPatch' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(52) : see previous definition of 'extractPatch'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(165): warning C4273: 'tld::BoundingBox::extractNormalizedPatch' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(53) : see previous definition of 'extractNormalizedPatch'
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(166): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>e:\workspace\fishtankvr\predator\tld\boundingbox.cpp(170): warning C4273: 'tld::BoundingBox::operator cv::Rect' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\predator\tld\boundingbox.h(57) : see previous definition of '.?AV?$Rect_@H@cv@@'
+         Generating Code...
+     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(62): warning C4700: uninitialized local variable 'conf' used
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Predator.dll.embed.manifest.res" Debug\Predator_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Debug\Predator.dll" /INCREMENTAL /NOLOGO /LIBPATH:E:\Workspace\FishTankVR\FishTankVR\cv\bin\x86\vc10\lib opencv_calib3d242d.lib opencv_contrib242d.lib opencv_core242d.lib opencv_features2d242d.lib opencv_flann242d.lib opencv_gpu242d.lib opencv_haartraining_engined.lib opencv_highgui242d.lib opencv_imgproc242d.lib opencv_legacy242d.lib opencv_ml242d.lib opencv_nonfree242d.lib opencv_objdetect242d.lib opencv_photo242d.lib opencv_stitching242d.lib opencv_ts242d.lib opencv_video242d.lib opencv_videostab242d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Predator.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Debug\Predator.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Debug\Predator.lib" /MACHINE:X86 /DLL Debug\Predator.dll.embed.manifest.res
+         Debug\boundingbox.obj
+         Debug\clusterer.obj
+         Debug\detector.obj
+         Debug\disjointset.obj
+         Debug\feature.obj
+         Debug\fern.obj
+         Debug\ffclassifier.obj
+         Debug\MedianFlowTracker.obj
+         Debug\bb.obj
+         Debug\bb_predict.obj
+         Debug\fbtrack.obj
+         Debug\lk.obj
+         Debug\median.obj
+         Debug\nnclassifier.obj
+         Debug\normalizedpatch.obj
+         Debug\params.obj
+         Debug\Predator.obj
+         Debug\tld_util.obj
+         Debug\twobitbp.obj
+         Debug\Vector3.obj
+            Creating library E:\Workspace\FishTankVR\Debug\Predator.lib and object E:\Workspace\FishTankVR\Debug\Predator.exp
+     1>boundingbox.obj : warning LNK4217: locally defined symbol ??0NormalizedPatch@tld@@QAE@AAVMat@cv@@AAVBoundingBox@1@_N@Z (public: __thiscall tld::NormalizedPatch::NormalizedPatch(class cv::Mat &,class tld::BoundingBox &,bool)) imported in function "public: class tld::NormalizedPatch __thiscall tld::BoundingBox::extractNormalizedPatch(class cv::Mat &,int)" (?extractNormalizedPatch@BoundingBox@tld@@QAE?AVNormalizedPatch@2@AAVMat@cv@@H@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?overlap@BoundingBox@tld@@QAEMAAV12@@Z (public: float __thiscall tld::BoundingBox::overlap(class tld::BoundingBox &)) imported in function "private: void __thiscall tld::Clusterer::calcDistances(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &,class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &)" (?calcDistances@Clusterer@tld@@AAEXAAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@AAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@4@@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ?overlap@BoundingBox@tld@@QAEMAAV12@@Z (public: float __thiscall tld::BoundingBox::overlap(class tld::BoundingBox &)) imported
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@HHHHM_N0M@Z (public: __thiscall tld::BoundingBox::BoundingBox(int,int,int,int,float,bool,bool,float)) imported in function "private: class tld::BoundingBox __thiscall tld::Clusterer::calcMeanBB(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?calcMeanBB@Clusterer@tld@@AAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@HHHHM_N0M@Z (public: __thiscall tld::BoundingBox::BoundingBox(int,int,int,int,float,bool,bool,float)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4049: locally defined symbol ??0BoundingBox@tld@@QAE@HHHHM_N0M@Z (public: __thiscall tld::BoundingBox::BoundingBox(int,int,int,int,float,bool,bool,float)) imported
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?unionSets@DisjointSet@tld@@QAEXHH@Z (public: void __thiscall tld::DisjointSet::unionSets(int,int)) imported in function "private: void __thiscall tld::Clusterer::cluster(class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &,class tld::DisjointSet &)" (?cluster@Clusterer@tld@@AAEXAAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@std@@AAVDisjointSet@2@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?makeSet@DisjointSet@tld@@QAEXH@Z (public: void __thiscall tld::DisjointSet::makeSet(int)) imported in function "private: void __thiscall tld::Clusterer::cluster(class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &,class tld::DisjointSet &)" (?cluster@Clusterer@tld@@AAEXAAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@std@@AAVDisjointSet@2@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?findSet@DisjointSet@tld@@QAEHH@Z (public: int __thiscall tld::DisjointSet::findSet(int)) imported in function "private: void __thiscall tld::Clusterer::cluster(class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &,class tld::DisjointSet &)" (?cluster@Clusterer@tld@@AAEXAAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@std@@AAVDisjointSet@2@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??1DisjointSet@tld@@UAE@XZ (public: virtual __thiscall tld::DisjointSet::~DisjointSet(void)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4049: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported
+     1>fern.obj : warning LNK4049: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>tld_util.obj : warning LNK4049: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported
+     1>twobitbp.obj : warning LNK4217: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported in function "public: int & __thiscall cv::Mat::at<int>(int,int)" (??$at@H@Mat@cv@@QAEAAHHH@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4049: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported
+     1>fern.obj : warning LNK4049: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported
+     1>Predator.obj : warning LNK4217: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??0DisjointSet@tld@@QAE@H@Z (public: __thiscall tld::DisjointSet::DisjointSet(int)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4217: locally defined symbol ?isInside@BoundingBox@tld@@QAE_NAAV12@@Z (public: bool __thiscall tld::BoundingBox::isInside(class tld::BoundingBox &)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>detector.obj : warning LNK4217: locally defined symbol ?setXY@BoundingBox@tld@@QAEXHH@Z (public: void __thiscall tld::BoundingBox::setXY(int,int)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>detector.obj : warning LNK4217: locally defined symbol ?setWH@BoundingBox@tld@@QAEXHH@Z (public: void __thiscall tld::BoundingBox::setWH(int,int)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>detector.obj : warning LNK4217: locally defined symbol ??1NormalizedPatch@tld@@UAE@XZ (public: virtual __thiscall tld::NormalizedPatch::~NormalizedPatch(void)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ??1NormalizedPatch@tld@@UAE@XZ (public: virtual __thiscall tld::NormalizedPatch::~NormalizedPatch(void)) imported
+     1>detector.obj : warning LNK4217: locally defined symbol ?filter@NNClassifier@tld@@QAE_NAAVNormalizedPatch@2@@Z (public: bool __thiscall tld::NNClassifier::filter(class tld::NormalizedPatch &)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>detector.obj : warning LNK4217: locally defined symbol ?extractNormalizedPatch@BoundingBox@tld@@QAE?AVNormalizedPatch@2@AAVMat@cv@@H@Z (public: class tld::NormalizedPatch __thiscall tld::BoundingBox::extractNormalizedPatch(class cv::Mat &,int)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ?extractNormalizedPatch@BoundingBox@tld@@QAE?AVNormalizedPatch@2@AAVMat@cv@@H@Z (public: class tld::NormalizedPatch __thiscall tld::BoundingBox::extractNormalizedPatch(class cv::Mat &,int)) imported
+     1>detector.obj : warning LNK4217: locally defined symbol ?filter@FFClassifier@tld@@QAE_NAAVMat@cv@@AAVBoundingBox@2@@Z (public: bool __thiscall tld::FFClassifier::filter(class cv::Mat &,class tld::BoundingBox &)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>feature.obj : warning LNK4217: locally defined symbol ?randomFloat@@YAMXZ (float __cdecl randomFloat(void)) imported in function "public: __thiscall tld::Feature::Feature(float,float)" (??0Feature@tld@@QAE@MM@Z)
+     1>nnclassifier.obj : warning LNK4217: locally defined symbol ?ncc@NormalizedPatch@tld@@QAEMAAV12@@Z (public: float __thiscall tld::NormalizedPatch::ncc(class tld::NormalizedPatch &)) imported in function "public: float __thiscall tld::NNClassifier::classify(class tld::NormalizedPatch &)" (?classify@NNClassifier@tld@@QAEMAAVNormalizedPatch@2@@Z)
+     1>nnclassifier.obj : warning LNK4217: locally defined symbol ??0NormalizedPatch@tld@@QAE@ABV01@@Z (public: __thiscall tld::NormalizedPatch::NormalizedPatch(class tld::NormalizedPatch const &)) imported in function "public: void __thiscall std::allocator<class tld::NormalizedPatch>::construct<class tld::NormalizedPatch &>(class tld::NormalizedPatch *,class tld::NormalizedPatch &)" (??$construct@AAVNormalizedPatch@tld@@@?$allocator@VNormalizedPatch@tld@@@std@@QAEXPAVNormalizedPatch@tld@@AAV23@@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ??0NormalizedPatch@tld@@QAE@ABV01@@Z (public: __thiscall tld::NormalizedPatch::NormalizedPatch(class tld::NormalizedPatch const &)) imported
+     1>normalizedpatch.obj : warning LNK4217: locally defined symbol ?extractPatch@BoundingBox@tld@@QAE?AVMat@cv@@AAV34@@Z (public: class cv::Mat __thiscall tld::BoundingBox::extractPatch(class cv::Mat &)) imported in function "public: static void __cdecl tld::NormalizedPatch::extractNormalizedValues(class cv::Mat &,class tld::BoundingBox &,float *)" (?extractNormalizedValues@NormalizedPatch@tld@@SAXAAVMat@cv@@AAVBoundingBox@2@PAM@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0Detector@tld@@QAE@HHPAVFFClassifier@1@PAVNNClassifier@1@MMMMHM@Z (public: __thiscall tld::Detector::Detector(int,int,class tld::FFClassifier *,class tld::NNClassifier *,float,float,float,float,int,float)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0NNClassifier@tld@@QAE@MM@Z (public: __thiscall tld::NNClassifier::NNClassifier(float,float)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0FFClassifier@tld@@QAE@HHMMM@Z (public: __thiscall tld::FFClassifier::FFClassifier(int,int,float,float,float)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?init@Detector@tld@@QAEXXZ (public: void __thiscall tld::Detector::init(void)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?init@FFClassifier@tld@@QAEXHHMM@Z (public: void __thiscall tld::FFClassifier::init(int,int,float,float)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?release@FFClassifier@tld@@QAEXXZ (public: void __thiscall tld::FFClassifier::release(void)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?release@NNClassifier@tld@@QAEXXZ (public: void __thiscall tld::NNClassifier::release(void)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z (public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)) imported in function "public: void __thiscall tld::Predator::processFrame(class cv::Mat &)" (?processFrame@Predator@tld@@QAEXAAVMat@cv@@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??BBoundingBox@tld@@QAE?AV?$Rect_@H@cv@@XZ (public: __thiscall tld::BoundingBox::operator class cv::Rect_<int>(void)) imported in function "public: void __thiscall tld::Predator::processFrame(class cv::Mat &)" (?processFrame@Predator@tld@@QAEXAAVMat@cv@@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?learn@NNClassifier@tld@@QAEXAAV?$vector@VNormalizedPatch@tld@@V?$allocator@VNormalizedPatch@tld@@@std@@@std@@@Z (public: void __thiscall tld::NNClassifier::learn(class std::vector<class tld::NormalizedPatch,class std::allocator<class tld::NormalizedPatch> > &)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?train@FFClassifier@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@H@Z (public: void __thiscall tld::FFClassifier::train(class cv::Mat &,class tld::BoundingBox &,int)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?tldSortByOverlapDesc@@YA_NU?$pair@HM@std@@0@Z (bool __cdecl tldSortByOverlapDesc(struct std::pair<int,float>,struct std::pair<int,float>)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?overlap@BoundingBox@tld@@QAEXAAV?$vector@VBoundingBox@tld@@V?$allocator@VBoundingBox@tld@@@std@@@std@@PAM@Z (public: void __thiscall tld::BoundingBox::overlap(class std::vector<class tld::BoundingBox,class std::allocator<class tld::BoundingBox> > &,float *)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@ABV?$Rect_@H@cv@@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class cv::Rect_<int> const &)) imported in function "public: void __thiscall tld::Predator::fuseHypotheses(void)" (?fuseHypotheses@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?classify@FFClassifier@tld@@QAEMAAVMat@cv@@AAVBoundingBox@2@@Z (public: float __thiscall tld::FFClassifier::classify(class cv::Mat &,class tld::BoundingBox &)) imported in function "public: void __thiscall tld::Predator::fuseHypotheses(void)" (?fuseHypotheses@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?classify@NNClassifier@tld@@QAEMAAVNormalizedPatch@2@@Z (public: float __thiscall tld::NNClassifier::classify(class tld::NormalizedPatch &)) imported in function "public: void __thiscall tld::Predator::fuseHypotheses(void)" (?fuseHypotheses@Predator@tld@@QAEXXZ)
+     1>twobitbp.obj : warning LNK4217: locally defined symbol ??0Feature@tld@@QAE@MM@Z (public: __thiscall tld::Feature::Feature(float,float)) imported in function "public: __thiscall tld::TwoBitBP::TwoBitBP(float,float)" (??0TwoBitBP@tld@@QAE@MM@Z)
+     1>twobitbp.obj : warning LNK4217: locally defined symbol ??1Feature@tld@@UAE@XZ (public: virtual __thiscall tld::Feature::~Feature(void)) imported in function "public: virtual __thiscall tld::TwoBitBP::~TwoBitBP(void)" (??1TwoBitBP@tld@@UAE@XZ)
+       Manifest:
+         Deleting file "Debug\Predator.dll.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Predator.dll.embed.manifest" /manifest Debug\Predator.dll.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Predator.dll.embed.manifest.res" Debug\Predator_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Debug\Predator.dll" /INCREMENTAL /NOLOGO /LIBPATH:E:\Workspace\FishTankVR\FishTankVR\cv\bin\x86\vc10\lib opencv_calib3d242d.lib opencv_contrib242d.lib opencv_core242d.lib opencv_features2d242d.lib opencv_flann242d.lib opencv_gpu242d.lib opencv_haartraining_engined.lib opencv_highgui242d.lib opencv_imgproc242d.lib opencv_legacy242d.lib opencv_ml242d.lib opencv_nonfree242d.lib opencv_objdetect242d.lib opencv_photo242d.lib opencv_stitching242d.lib opencv_ts242d.lib opencv_video242d.lib opencv_videostab242d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Predator.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Debug\Predator.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Debug\Predator.lib" /MACHINE:X86 /DLL Debug\Predator.dll.embed.manifest.res
+         Debug\boundingbox.obj
+         Debug\clusterer.obj
+         Debug\detector.obj
+         Debug\disjointset.obj
+         Debug\feature.obj
+         Debug\fern.obj
+         Debug\ffclassifier.obj
+         Debug\MedianFlowTracker.obj
+         Debug\bb.obj
+         Debug\bb_predict.obj
+         Debug\fbtrack.obj
+         Debug\lk.obj
+         Debug\median.obj
+         Debug\nnclassifier.obj
+         Debug\normalizedpatch.obj
+         Debug\params.obj
+         Debug\Predator.obj
+         Debug\tld_util.obj
+         Debug\twobitbp.obj
+         Debug\Vector3.obj
+            Creating library E:\Workspace\FishTankVR\Debug\Predator.lib and object E:\Workspace\FishTankVR\Debug\Predator.exp
+     1>boundingbox.obj : warning LNK4217: locally defined symbol ??0NormalizedPatch@tld@@QAE@AAVMat@cv@@AAVBoundingBox@1@_N@Z (public: __thiscall tld::NormalizedPatch::NormalizedPatch(class cv::Mat &,class tld::BoundingBox &,bool)) imported in function "public: class tld::NormalizedPatch __thiscall tld::BoundingBox::extractNormalizedPatch(class cv::Mat &,int)" (?extractNormalizedPatch@BoundingBox@tld@@QAE?AVNormalizedPatch@2@AAVMat@cv@@H@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?overlap@BoundingBox@tld@@QAEMAAV12@@Z (public: float __thiscall tld::BoundingBox::overlap(class tld::BoundingBox &)) imported in function "private: void __thiscall tld::Clusterer::calcDistances(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &,class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &)" (?calcDistances@Clusterer@tld@@AAEXAAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@AAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@4@@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ?overlap@BoundingBox@tld@@QAEMAAV12@@Z (public: float __thiscall tld::BoundingBox::overlap(class tld::BoundingBox &)) imported
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@HHHHM_N0M@Z (public: __thiscall tld::BoundingBox::BoundingBox(int,int,int,int,float,bool,bool,float)) imported in function "private: class tld::BoundingBox __thiscall tld::Clusterer::calcMeanBB(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?calcMeanBB@Clusterer@tld@@AAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@HHHHM_N0M@Z (public: __thiscall tld::BoundingBox::BoundingBox(int,int,int,int,float,bool,bool,float)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4049: locally defined symbol ??0BoundingBox@tld@@QAE@HHHHM_N0M@Z (public: __thiscall tld::BoundingBox::BoundingBox(int,int,int,int,float,bool,bool,float)) imported
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?unionSets@DisjointSet@tld@@QAEXHH@Z (public: void __thiscall tld::DisjointSet::unionSets(int,int)) imported in function "private: void __thiscall tld::Clusterer::cluster(class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &,class tld::DisjointSet &)" (?cluster@Clusterer@tld@@AAEXAAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@std@@AAVDisjointSet@2@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?makeSet@DisjointSet@tld@@QAEXH@Z (public: void __thiscall tld::DisjointSet::makeSet(int)) imported in function "private: void __thiscall tld::Clusterer::cluster(class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &,class tld::DisjointSet &)" (?cluster@Clusterer@tld@@AAEXAAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@std@@AAVDisjointSet@2@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ?findSet@DisjointSet@tld@@QAEHH@Z (public: int __thiscall tld::DisjointSet::findSet(int)) imported in function "private: void __thiscall tld::Clusterer::cluster(class std::vector<struct tld::Distance,class std::allocator<struct tld::Distance> > &,class tld::DisjointSet &)" (?cluster@Clusterer@tld@@AAEXAAV?$vector@UDistance@tld@@V?$allocator@UDistance@tld@@@std@@@std@@AAVDisjointSet@2@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??1DisjointSet@tld@@UAE@XZ (public: virtual __thiscall tld::DisjointSet::~DisjointSet(void)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4049: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported
+     1>fern.obj : warning LNK4049: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@ABV01@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class tld::BoundingBox const &)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>tld_util.obj : warning LNK4049: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported
+     1>twobitbp.obj : warning LNK4217: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported in function "public: int & __thiscall cv::Mat::at<int>(int,int)" (??$at@H@Mat@cv@@QAEAAHHH@Z)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4049: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported
+     1>fern.obj : warning LNK4049: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported
+     1>Predator.obj : warning LNK4217: locally defined symbol ??1BoundingBox@tld@@QAE@XZ (public: __thiscall tld::BoundingBox::~BoundingBox(void)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>clusterer.obj : warning LNK4217: locally defined symbol ??0DisjointSet@tld@@QAE@H@Z (public: __thiscall tld::DisjointSet::DisjointSet(int)) imported in function "public: class tld::BoundingBox __thiscall tld::Clusterer::cluster(class std::vector<class tld::BoundingBox *,class std::allocator<class tld::BoundingBox *> > &)" (?cluster@Clusterer@tld@@QAE?AVBoundingBox@2@AAV?$vector@PAVBoundingBox@tld@@V?$allocator@PAVBoundingBox@tld@@@std@@@std@@@Z)
+     1>detector.obj : warning LNK4217: locally defined symbol ?isInside@BoundingBox@tld@@QAE_NAAV12@@Z (public: bool __thiscall tld::BoundingBox::isInside(class tld::BoundingBox &)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>detector.obj : warning LNK4217: locally defined symbol ?setXY@BoundingBox@tld@@QAEXHH@Z (public: void __thiscall tld::BoundingBox::setXY(int,int)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>detector.obj : warning LNK4217: locally defined symbol ?setWH@BoundingBox@tld@@QAEXHH@Z (public: void __thiscall tld::BoundingBox::setWH(int,int)) imported in function "public: void __thiscall tld::Detector::initWindows(void)" (?initWindows@Detector@tld@@QAEXXZ)
+     1>detector.obj : warning LNK4217: locally defined symbol ??1NormalizedPatch@tld@@UAE@XZ (public: virtual __thiscall tld::NormalizedPatch::~NormalizedPatch(void)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ??1NormalizedPatch@tld@@UAE@XZ (public: virtual __thiscall tld::NormalizedPatch::~NormalizedPatch(void)) imported
+     1>detector.obj : warning LNK4217: locally defined symbol ?filter@NNClassifier@tld@@QAE_NAAVNormalizedPatch@2@@Z (public: bool __thiscall tld::NNClassifier::filter(class tld::NormalizedPatch &)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>detector.obj : warning LNK4217: locally defined symbol ?extractNormalizedPatch@BoundingBox@tld@@QAE?AVNormalizedPatch@2@AAVMat@cv@@H@Z (public: class tld::NormalizedPatch __thiscall tld::BoundingBox::extractNormalizedPatch(class cv::Mat &,int)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ?extractNormalizedPatch@BoundingBox@tld@@QAE?AVNormalizedPatch@2@AAVMat@cv@@H@Z (public: class tld::NormalizedPatch __thiscall tld::BoundingBox::extractNormalizedPatch(class cv::Mat &,int)) imported
+     1>detector.obj : warning LNK4217: locally defined symbol ?filter@FFClassifier@tld@@QAE_NAAVMat@cv@@AAVBoundingBox@2@@Z (public: bool __thiscall tld::FFClassifier::filter(class cv::Mat &,class tld::BoundingBox &)) imported in function "public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)" (?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z)
+     1>feature.obj : warning LNK4217: locally defined symbol ?randomFloat@@YAMXZ (float __cdecl randomFloat(void)) imported in function "public: __thiscall tld::Feature::Feature(float,float)" (??0Feature@tld@@QAE@MM@Z)
+     1>nnclassifier.obj : warning LNK4217: locally defined symbol ?ncc@NormalizedPatch@tld@@QAEMAAV12@@Z (public: float __thiscall tld::NormalizedPatch::ncc(class tld::NormalizedPatch &)) imported in function "public: float __thiscall tld::NNClassifier::classify(class tld::NormalizedPatch &)" (?classify@NNClassifier@tld@@QAEMAAVNormalizedPatch@2@@Z)
+     1>nnclassifier.obj : warning LNK4217: locally defined symbol ??0NormalizedPatch@tld@@QAE@ABV01@@Z (public: __thiscall tld::NormalizedPatch::NormalizedPatch(class tld::NormalizedPatch const &)) imported in function "public: void __thiscall std::allocator<class tld::NormalizedPatch>::construct<class tld::NormalizedPatch &>(class tld::NormalizedPatch *,class tld::NormalizedPatch &)" (??$construct@AAVNormalizedPatch@tld@@@?$allocator@VNormalizedPatch@tld@@@std@@QAEXPAVNormalizedPatch@tld@@AAV23@@Z)
+     1>Predator.obj : warning LNK4049: locally defined symbol ??0NormalizedPatch@tld@@QAE@ABV01@@Z (public: __thiscall tld::NormalizedPatch::NormalizedPatch(class tld::NormalizedPatch const &)) imported
+     1>normalizedpatch.obj : warning LNK4217: locally defined symbol ?extractPatch@BoundingBox@tld@@QAE?AVMat@cv@@AAV34@@Z (public: class cv::Mat __thiscall tld::BoundingBox::extractPatch(class cv::Mat &)) imported in function "public: static void __cdecl tld::NormalizedPatch::extractNormalizedValues(class cv::Mat &,class tld::BoundingBox &,float *)" (?extractNormalizedValues@NormalizedPatch@tld@@SAXAAVMat@cv@@AAVBoundingBox@2@PAM@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0Detector@tld@@QAE@HHPAVFFClassifier@1@PAVNNClassifier@1@MMMMHM@Z (public: __thiscall tld::Detector::Detector(int,int,class tld::FFClassifier *,class tld::NNClassifier *,float,float,float,float,int,float)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0NNClassifier@tld@@QAE@MM@Z (public: __thiscall tld::NNClassifier::NNClassifier(float,float)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0FFClassifier@tld@@QAE@HHMMM@Z (public: __thiscall tld::FFClassifier::FFClassifier(int,int,float,float,float)) imported in function "public: void __thiscall tld::Predator::init(void)" (?init@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?init@Detector@tld@@QAEXXZ (public: void __thiscall tld::Detector::init(void)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?init@FFClassifier@tld@@QAEXHHMM@Z (public: void __thiscall tld::FFClassifier::init(int,int,float,float)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?release@FFClassifier@tld@@QAEXXZ (public: void __thiscall tld::FFClassifier::release(void)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?release@NNClassifier@tld@@QAEXXZ (public: void __thiscall tld::NNClassifier::release(void)) imported in function "public: void __thiscall tld::Predator::selectObject(class cv::Mat &,class tld::BoundingBox &)" (?selectObject@Predator@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?detect@Detector@tld@@QAE?AVBoundingBox@2@AAVMat@cv@@0@Z (public: class tld::BoundingBox __thiscall tld::Detector::detect(class cv::Mat &,class cv::Mat &)) imported in function "public: void __thiscall tld::Predator::processFrame(class cv::Mat &)" (?processFrame@Predator@tld@@QAEXAAVMat@cv@@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??BBoundingBox@tld@@QAE?AV?$Rect_@H@cv@@XZ (public: __thiscall tld::BoundingBox::operator class cv::Rect_<int>(void)) imported in function "public: void __thiscall tld::Predator::processFrame(class cv::Mat &)" (?processFrame@Predator@tld@@QAEXAAVMat@cv@@@Z)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?learn@NNClassifier@tld@@QAEXAAV?$vector@VNormalizedPatch@tld@@V?$allocator@VNormalizedPatch@tld@@@std@@@std@@@Z (public: void __thiscall tld::NNClassifier::learn(class std::vector<class tld::NormalizedPatch,class std::allocator<class tld::NormalizedPatch> > &)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?train@FFClassifier@tld@@QAEXAAVMat@cv@@AAVBoundingBox@2@H@Z (public: void __thiscall tld::FFClassifier::train(class cv::Mat &,class tld::BoundingBox &,int)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?tldSortByOverlapDesc@@YA_NU?$pair@HM@std@@0@Z (bool __cdecl tldSortByOverlapDesc(struct std::pair<int,float>,struct std::pair<int,float>)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?overlap@BoundingBox@tld@@QAEXAAV?$vector@VBoundingBox@tld@@V?$allocator@VBoundingBox@tld@@@std@@@std@@PAM@Z (public: void __thiscall tld::BoundingBox::overlap(class std::vector<class tld::BoundingBox,class std::allocator<class tld::BoundingBox> > &,float *)) imported in function "public: void __thiscall tld::Predator::initialLearning(void)" (?initialLearning@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ??0BoundingBox@tld@@QAE@ABV?$Rect_@H@cv@@@Z (public: __thiscall tld::BoundingBox::BoundingBox(class cv::Rect_<int> const &)) imported in function "public: void __thiscall tld::Predator::fuseHypotheses(void)" (?fuseHypotheses@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?classify@FFClassifier@tld@@QAEMAAVMat@cv@@AAVBoundingBox@2@@Z (public: float __thiscall tld::FFClassifier::classify(class cv::Mat &,class tld::BoundingBox &)) imported in function "public: void __thiscall tld::Predator::fuseHypotheses(void)" (?fuseHypotheses@Predator@tld@@QAEXXZ)
+     1>Predator.obj : warning LNK4217: locally defined symbol ?classify@NNClassifier@tld@@QAEMAAVNormalizedPatch@2@@Z (public: float __thiscall tld::NNClassifier::classify(class tld::NormalizedPatch &)) imported in function "public: void __thiscall tld::Predator::fuseHypotheses(void)" (?fuseHypotheses@Predator@tld@@QAEXXZ)
+     1>twobitbp.obj : warning LNK4217: locally defined symbol ??0Feature@tld@@QAE@MM@Z (public: __thiscall tld::Feature::Feature(float,float)) imported in function "public: __thiscall tld::TwoBitBP::TwoBitBP(float,float)" (??0TwoBitBP@tld@@QAE@MM@Z)
+     1>twobitbp.obj : warning LNK4217: locally defined symbol ??1Feature@tld@@UAE@XZ (public: virtual __thiscall tld::Feature::~Feature(void)) imported in function "public: virtual __thiscall tld::TwoBitBP::~TwoBitBP(void)" (??1TwoBitBP@tld@@UAE@XZ)
+         Predator.vcxproj -> E:\Workspace\FishTankVR\Debug\Predator.dll
+       FinalizeBuildStatus:
+         Deleting file "Debug\Predator.unsuccessfulbuild".
+         Touching "Debug\Predator.lastbuildstate".
+     1>Done Building Project "E:\Workspace\FishTankVR\Predator\Predator.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.79

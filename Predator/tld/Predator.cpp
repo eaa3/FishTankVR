@@ -55,6 +55,7 @@ void Predator::init()
 {
     if( !this->initialized )
     {
+
         this->ffClassifier = new FFClassifier(this->params->n_ferns, this->params->n_features, this->params->min_scale, this->params->max_scale, this->params->decision_threshold);
         this->nnClassifier = new NNClassifier(this->params->theta_tp, this->params->theta_fp);
         this->detector = new Detector(this->frameW, this->frameH, this->ffClassifier, this->nnClassifier, this->params->min_window_scale, this->params->max_window_scale, this->params->base_window_scale, this->params->shift, this->params->min_bb, this->params->cutoff);

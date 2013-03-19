@@ -211,17 +211,15 @@ void drawBorderedTeapot(float size, Vec3f pos, Vec4f color, Vec4f border_color)
 
 void init()
 {
-
 	do{
-
 		cap >> frame;
+
 
 		ht.init(frame);
 
 	}while( !ht.isInited() && activated );
 
-
-	ft.setInitialFrustum(realW,realH);
+	ft.setInitialFrustum(realW,realH, 0.1);
 
 	glEnable(GL_DEPTH_TEST);
 
@@ -273,7 +271,9 @@ void display()
 	cap >> frame;
 	
 	//BoundingBox which contains the user's head.
-	BoundingBox bb = ht.track(frame);
+	BoundingBox bb;
+	if( ht.isInited() ) bb = ht.track(frame);
+	 
 
 	//Drawing bb around user's head.
 	draw_box(bb,frame,Scalar(255,0,0));
@@ -295,6 +295,7 @@ void display()
 
 		if( !ht.isInited() ) {
 
+		
 			ht.init(frame);
 
 		}else if ( bb.valid ) {			
@@ -330,7 +331,7 @@ void display()
 
 	drawBorderedCube(size, Vec3f(0,0,size/2), Vec4f(0.8,0.3,0.3,0.1), Vec4f(0,0,0,0));
 
-	drawBorderedCube(size, Vec3f(-0.10,-0.10, -0.05), Vec4f(0.3,0.8,0.3,0.1), Vec4f(0,0,0,0) );
+	drawBorderedCube(size, Vec3f(-0.09, -0.10, -0.05), Vec4f(0.3,0.8,0.3,0.1), Vec4f(0,0,0,0) );
 
 	drawBorderedCube(size, Vec3f(0.20,-0.10, -0.05), Vec4f(0.3,0.3,0.8,0.3), Vec4f(0,0,0,0) );
 

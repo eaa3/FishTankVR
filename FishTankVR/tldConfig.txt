@@ -7,6 +7,7 @@
 #N_FERNS=10
 #N_FEATURES=5
 #MIN_SCALE=0.100000
+#MAX_SCALE=0.500000
 #DECISION_THRESHOLD=0.500000
 
 //P-N Criteria of deciding if a bb is positive or not.

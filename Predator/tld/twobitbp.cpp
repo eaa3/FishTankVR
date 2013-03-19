@@ -4,7 +4,7 @@ namespace tld {
 
 TwoBitBP::TwoBitBP(float minScale, float maxScale) : Feature(minScale, maxScale)
 {
-    //ctor
+    
 }
 
 TwoBitBP::~TwoBitBP()
@@ -32,14 +32,15 @@ int TwoBitBP::evaluate(Mat& integralImage, BoundingBox patch)
 
     ******************************************/
 
-    int x = (int)(xp * float(patch.w)) + patch.x;
-    int y = (int)(yp * float(patch.h)) + patch.y;
-    int w = (int)((wp * float(patch.w)) * 0.5f);
-    int h = (int)((hp * float(patch.h)) * 0.5f);
+    int x = (int)(this->xp * float(patch.w)) + patch.x;
+    int y = (int)(this->yp * float(patch.h)) + patch.y;
+    int w = (int)((this->wp * float(patch.w)) * 0.5f);
+    int h = (int)((this->hp * float(patch.h)) * 0.5f);
     int xf = x + w;
     int yf = y + h;
 
 
+	
     int A = integralImage.at<int>(y, x);
     int B = integralImage.at<int>(y, xf);
     int C = integralImage.at<int>(yf, x);
@@ -48,6 +49,7 @@ int TwoBitBP::evaluate(Mat& integralImage, BoundingBox patch)
     int F = integralImage.at<int>(y + h/2, xf);
     int G = integralImage.at<int>(y, x + w/2);
     int H = integralImage.at<int>(yf, x + w/2);
+	
 
     int A1 = D - C - F + E;
     int A2 = F - E - B + A;
@@ -60,7 +62,8 @@ int TwoBitBP::evaluate(Mat& integralImage, BoundingBox patch)
     int B2 = D - H - B + G;
 
     if( B1 > B2 ) eval |= 1;
-
+	
+	
     return eval;
 }
 

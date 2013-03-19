@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FTVR", "FTVR\FTVR.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Predator", "Predator\Predator.vcxproj", "{7AC282F6-85E6-476A-83B5-6B3AAB476388}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DepthEstimator", "HEstimator\HEstimator.vcxproj", "{55DCB7E3-1FD9-45C8-B850-C2D791AC05B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -25,6 +27,10 @@ Global
 		{7AC282F6-85E6-476A-83B5-6B3AAB476388}.Debug|Win32.Build.0 = Debug|Win32
 		{7AC282F6-85E6-476A-83B5-6B3AAB476388}.Release|Win32.ActiveCfg = Release|Win32
 		{7AC282F6-85E6-476A-83B5-6B3AAB476388}.Release|Win32.Build.0 = Release|Win32
+		{55DCB7E3-1FD9-45C8-B850-C2D791AC05B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{55DCB7E3-1FD9-45C8-B850-C2D791AC05B7}.Debug|Win32.Build.0 = Debug|Win32
+		{55DCB7E3-1FD9-45C8-B850-C2D791AC05B7}.Release|Win32.ActiveCfg = Release|Win32
+		{55DCB7E3-1FD9-45C8-B850-C2D791AC05B7}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

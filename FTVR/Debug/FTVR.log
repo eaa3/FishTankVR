@@ -1,0 +1,54 @@
+﻿Build started 04/03/2013 16:35:21.
+     1>Project "E:\Workspace\FishTankVR\FTVR\FTVR.vcxproj" on node 3 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\FTVR.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\FTVR.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D FTVR_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt FishTank.cpp Matrices.cpp
+         Matrices.cpp
+         FishTank.cpp
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(5): warning C4273: 'FishTank::FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(26) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(14): warning C4273: 'FishTank::FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(27) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(19): warning C4273: 'FishTank::FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(28) : see previous definition of '{ctor}'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(28): warning C4273: 'FishTank::~FishTank' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(39) : see previous definition of '{dtor}'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(33): warning C4273: 'FishTank::setInitialFrustum' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(30) : see previous definition of 'setInitialFrustum'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(44): warning C4273: 'FishTank::setInitialFrustum' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(31) : see previous definition of 'setInitialFrustum'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(54): warning C4273: 'FishTank::setFrustum' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(33) : see previous definition of 'setFrustum'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(83): warning C4273: 'FishTank::setView' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(34) : see previous definition of 'setView'
+     1>e:\workspace\fishtankvr\ftvr\fishtank.cpp(112): warning C4273: 'FishTank::setAll' : inconsistent dll linkage
+                 e:\workspace\fishtankvr\ftvr\fishtank.h(36) : see previous definition of 'setAll'
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FTVR.dll.embed.manifest.res" Debug\FTVR_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Debug\FTVR.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\FTVR.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Debug\FTVR.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Debug\FTVR.lib" /MACHINE:X86 /DLL Debug\FTVR.dll.embed.manifest.res
+         Debug\FishTank.obj
+         Debug\Matrices.obj
+            Creating library E:\Workspace\FishTankVR\Debug\FTVR.lib and object E:\Workspace\FishTankVR\Debug\FTVR.exp
+       Manifest:
+         Deleting file "Debug\FTVR.dll.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\FTVR.dll.embed.manifest" /manifest Debug\FTVR.dll.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FTVR.dll.embed.manifest.res" Debug\FTVR_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Debug\FTVR.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\FTVR.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Debug\FTVR.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Debug\FTVR.lib" /MACHINE:X86 /DLL Debug\FTVR.dll.embed.manifest.res
+         Debug\FishTank.obj
+         Debug\Matrices.obj
+            Creating library E:\Workspace\FishTankVR\Debug\FTVR.lib and object E:\Workspace\FishTankVR\Debug\FTVR.exp
+         FTVR.vcxproj -> E:\Workspace\FishTankVR\Debug\FTVR.dll
+       FinalizeBuildStatus:
+         Deleting file "Debug\FTVR.unsuccessfulbuild".
+         Touching "Debug\FTVR.lastbuildstate".
+     1>Done Building Project "E:\Workspace\FishTankVR\FTVR\FTVR.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.78

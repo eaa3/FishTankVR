@@ -10,11 +10,16 @@ Feature::Feature()
 
 Feature::Feature(float minScale, float maxScale)
 {
-    this->wp = (maxScale - minScale)*randomFloat() + minScale;
-    this->hp = (maxScale - minScale)*randomFloat() + minScale;
+	float random1 = randomFloat();
+	float random2 = randomFloat();
 
-    this->xp = (1.0f - this->wp)*randomFloat();
-    this->yp = (1.0f - this->hp)*randomFloat();
+    this->wp = (maxScale - minScale)*random1+ minScale;
+    this->hp = (maxScale - minScale)*random2 + minScale;
+
+	float random3 = randomFloat();
+	float random4 = randomFloat();
+    this->xp = (1.0f - this->wp)*random3;
+    this->yp = (1.0f - this->hp)*random4;
 }
 
 Feature::~Feature()

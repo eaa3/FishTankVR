@@ -1,6 +1,12 @@
 #ifndef DETECTOR_H
 #define DETECTOR_H
 
+#ifdef MATHFUNCSDLL_EXPORTS
+#define MATHFUNCSDLL_API __declspec(dllexport) 
+#else
+#define MATHFUNCSDLL_API __declspec(dllimport) 
+#endif
+
 #include <vector>
 #include "includes.h"
 #include "boundingbox.h"
@@ -33,18 +39,18 @@ class Detector
 
         bool initialized;
 
-        void initWindows();
+        MATHFUNCSDLL_API void initWindows();
 
-        Detector(int frameW, int frameH, FFClassifier* ffClassifier, NNClassifier* nnClassifier = NULL);
+        MATHFUNCSDLL_API Detector(int frameW, int frameH, FFClassifier* ffClassifier, NNClassifier* nnClassifier = NULL);
 
-        Detector(int frameW, int frameH, FFClassifier* ffClassifier, NNClassifier* nnClassifier = NULL, float minScale = MIN_WINDOW_SCALE, float maxScale = MAX_WINDOW_SCALE, float baseScale = BASE_WINDOW_SCALE,  float shift = SHIFT, int min_bb = MIN_BB, float cutoff = CUTOFF);
-        virtual ~Detector();
+        MATHFUNCSDLL_API Detector(int frameW, int frameH, FFClassifier* ffClassifier, NNClassifier* nnClassifier = NULL, float minScale = MIN_WINDOW_SCALE, float maxScale = MAX_WINDOW_SCALE, float baseScale = BASE_WINDOW_SCALE,  float shift = SHIFT, int min_bb = MIN_BB, float cutoff = CUTOFF);
+        MATHFUNCSDLL_API virtual ~Detector();
 
-        void init();
-        void release();
+        MATHFUNCSDLL_API void init();
+        MATHFUNCSDLL_API void release();
 
 
-        BoundingBox detect(Mat& img, Mat& integralImage);
+        MATHFUNCSDLL_API BoundingBox detect(Mat& img, Mat& integralImage);
     protected:
     private:
 };

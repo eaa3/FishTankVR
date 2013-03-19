@@ -1,5 +1,4 @@
-#ifndef NNCLASSIFIER_H
-#define NNCLASSIFIER_H
+#pragma once
 
 #ifdef MATHFUNCSDLL_EXPORTS
 #define MATHFUNCSDLL_API __declspec(dllexport) 
@@ -27,6 +26,7 @@ class NNClassifier
     public:
 
         float thetaTP, thetaFP;
+
         MATHFUNCSDLL_API NNClassifier(float thetaTP = THETA_TP, float thetaFP = THETA_FP);
         MATHFUNCSDLL_API virtual ~NNClassifier();
 
@@ -45,4 +45,3 @@ class NNClassifier
 
 }
 
-#endif // NNCLASSIFIER_H

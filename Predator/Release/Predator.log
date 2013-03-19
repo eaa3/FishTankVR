@@ -1,86 +1,10 @@
-﻿Build started 22/02/2013 14:31:56.
+﻿Build started 06/03/2013 15:23:11.
      1>Project "E:\Workspace\FishTankVR\Predator\Predator.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Release\Predator.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IE:\Workspace\FishTankVR\Predator\tld\mftracker /IE:\Workspace\FishTankVR\FishTankVR\cv /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PREDATOR_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt tld\Predator.cpp tld\detector.cpp tld\feature.cpp tld\fern.cpp tld\ffclassifier.cpp tld\tld_util.cpp tld\twobitbp.cpp
-         Predator.cpp
-     1>tld\Predator.cpp(9): warning C4273: 'tld::Predator::Predator' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(63) : see previous definition of '{ctor}'
-     1>tld\Predator.cpp(27): warning C4273: 'tld::Predator::Predator' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(64) : see previous definition of '{ctor}'
-     1>tld\Predator.cpp(45): warning C4273: 'tld::Predator::~Predator' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(65) : see previous definition of '{dtor}'
-     1>tld\Predator.cpp(55): warning C4273: 'tld::Predator::init' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(67) : see previous definition of 'init'
-     1>tld\Predator.cpp(60): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>tld\Predator.cpp(60): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>tld\Predator.cpp(73): warning C4273: 'tld::Predator::release' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(68) : see previous definition of 'release'
-     1>tld\Predator.cpp(86): warning C4273: 'tld::Predator::reset' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(69) : see previous definition of 'reset'
-     1>tld\Predator.cpp(95): warning C4273: 'tld::Predator::storeData' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(43) : see previous definition of 'storeData'
-     1>tld\Predator.cpp(107): warning C4273: 'tld::Predator::selectObject' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(71) : see previous definition of 'selectObject'
-     1>tld\Predator.cpp(113): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>tld\Predator.cpp(114): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>tld\Predator.cpp(137): warning C4273: 'tld::Predator::processFrame' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(72) : see previous definition of 'processFrame'
-     1>tld\Predator.cpp(178): warning C4273: 'tld::Predator::initialLearning' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(46) : see previous definition of 'initialLearning'
-     1>tld\Predator.cpp(195): warning C4018: '<' : signed/unsigned mismatch
-     1>tld\Predator.cpp(246): warning C4273: 'tld::Predator::learn' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(45) : see previous definition of 'learn'
-     1>tld\Predator.cpp(272): warning C4018: '<' : signed/unsigned mismatch
-     1>tld\Predator.cpp(344): warning C4273: 'tld::Predator::fuseHypotheses' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\Predator.h(44) : see previous definition of 'fuseHypotheses'
-         detector.cpp
-     1>tld\detector.cpp(64): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>tld\detector.cpp(66): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>tld\detector.cpp(68): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>tld\detector.cpp(68): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>tld\detector.cpp(78): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>tld\detector.cpp(85): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>tld\detector.cpp(120): warning C4018: '<' : signed/unsigned mismatch
-         feature.cpp
-         fern.cpp
-     1>tld\fern.cpp(8): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>tld\fern.cpp(26): warning C4018: '<' : signed/unsigned mismatch
-     1>tld\fern.cpp(47): warning C4018: '<' : signed/unsigned mismatch
-         ffclassifier.cpp
-     1>tld\ffclassifier.cpp(7): warning C4273: 'tld::FFClassifier::FFClassifier' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(28) : see previous definition of '{ctor}'
-     1>tld\ffclassifier.cpp(19): warning C4273: 'tld::FFClassifier::~FFClassifier' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(29) : see previous definition of '{dtor}'
-     1>tld\ffclassifier.cpp(25): warning C4273: 'tld::FFClassifier::init' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(38) : see previous definition of 'init'
-     1>tld\ffclassifier.cpp(28): warning C4018: '<' : signed/unsigned mismatch
-     1>tld\ffclassifier.cpp(32): warning C4273: 'tld::FFClassifier::release' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(39) : see previous definition of 'release'
-     1>tld\ffclassifier.cpp(33): warning C4018: '<' : signed/unsigned mismatch
-     1>tld\ffclassifier.cpp(42): warning C4273: 'tld::FFClassifier::train' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(32) : see previous definition of 'train'
-     1>tld\ffclassifier.cpp(49): warning C4018: '<' : signed/unsigned mismatch
-     1>tld\ffclassifier.cpp(58): warning C4273: 'tld::FFClassifier::classify' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(34) : see previous definition of 'classify'
-     1>tld\ffclassifier.cpp(61): warning C4018: '<' : signed/unsigned mismatch
-     1>tld\ffclassifier.cpp(70): warning C4273: 'tld::FFClassifier::filter' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\ffclassifier.h(36) : see previous definition of 'filter'
-         tld_util.cpp
-     1>tld\tld_util.cpp(6): warning C4273: 'randomFloat' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\tld_util.h(14) : see previous definition of 'randomFloat'
-     1>tld\tld_util.cpp(12): warning C4273: 'randomDouble' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\tld_util.h(15) : see previous definition of 'randomDouble'
-     1>tld\tld_util.cpp(23): warning C4273: 'get_roi' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\tld_util.h(21) : see previous definition of 'get_roi'
-     1>tld\tld_util.cpp(41): warning C4273: 'draw_box' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\tld_util.h(22) : see previous definition of 'draw_box'
-     1>tld\tld_util.cpp(49): warning C4273: 'gtCompf' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\tld_util.h(18) : see previous definition of 'gtCompf'
-     1>tld\tld_util.cpp(54): warning C4273: 'tldSortByOverlapDesc' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\predator\tld\tld_util.h(19) : see previous definition of 'tldSortByOverlapDesc'
-         twobitbp.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IE:\Workspace\FishTankVR\Predator\tld\mftracker /IE:\Workspace\FishTankVR\FishTankVR\cv /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PREDATOR_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt tld\Vector3.cpp
+         Vector3.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Release\Predator.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:E:\Workspace\FishTankVR\FishTankVR\cv\bin\x86\vc10\lib opencv_calib3d242.lib opencv_contrib242.lib opencv_core242.lib opencv_features2d242.lib opencv_flann242.lib opencv_gpu242.lib opencv_haartraining_engine.lib opencv_highgui242.lib opencv_imgproc242.lib opencv_legacy242.lib opencv_ml242.lib opencv_nonfree242.lib opencv_objdetect242.lib opencv_photo242.lib opencv_stitching242.lib opencv_ts242.lib opencv_video242.lib opencv_videostab242.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Predator.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Release\Predator.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Release\Predator.lib" /MACHINE:X86 /DLL Release\boundingbox.obj
          Release\clusterer.obj
@@ -116,4 +40,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:07.28
+Time Elapsed 00:00:09.64

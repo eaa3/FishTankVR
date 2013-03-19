@@ -20,6 +20,7 @@ Params::Params(string paramsFile)
         fscanf(in, "#N_FERNS=%d\n", &this->n_ferns);
         fscanf(in, "#N_FEATURES=%d\n", &this->n_features);
         fscanf(in, "#MIN_SCALE=%f\n", &this->min_scale);
+		fscanf(in, "#MAX_SCALE=%f\n", &this->max_scale);
         fscanf(in, "#DECISION_THRESHOLD=%f\n", &this->decision_threshold);
 
         fgets(comment,500, in);
@@ -102,6 +103,7 @@ void Params::save(string paramsFile)
     fprintf(out, "#N_FERNS=%d\n", this->n_ferns);
     fprintf(out, "#N_FEATURES=%d\n", this->n_features);
     fprintf(out, "#MIN_SCALE=%f\n", this->min_scale);
+	fprintf(out, "#MAX_SCALE=%f\n", this->max_scale);
     fprintf(out, "#DECISION_THRESHOLD=%f\n", this->decision_threshold);
 
     fprintf(out, "#MIN_POSITIVE_OVERLAP=%f\n", this->min_positive_overlap);

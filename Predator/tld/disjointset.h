@@ -1,6 +1,12 @@
 #ifndef DISJOINTSET_H
 #define DISJOINTSET_H
 
+#ifdef MATHFUNCSDLL_EXPORTS
+#define MATHFUNCSDLL_API __declspec(dllexport) 
+#else
+#define MATHFUNCSDLL_API __declspec(dllimport) 
+#endif
+
 #include <vector>
 
 
@@ -13,18 +19,18 @@ const int NOT_IN_A_SET = -1;
 class DisjointSet
 {
     public:
-        DisjointSet(int maxSize);
-        virtual ~DisjointSet();
+        MATHFUNCSDLL_API DisjointSet(int maxSize);
+        MATHFUNCSDLL_API virtual ~DisjointSet();
 
 
         vector<int> elements, rank;
         int setCount, elemCount;
 
-        void makeSet(int i);
-        void unionSets(int i, int j);
-        void linkSets(int i, int j);
+        MATHFUNCSDLL_API void makeSet(int i);
+        MATHFUNCSDLL_API void unionSets(int i, int j);
+        MATHFUNCSDLL_API void linkSets(int i, int j);
 
-        int findSet(int i);
+        MATHFUNCSDLL_API int findSet(int i);
 
 
     protected:
