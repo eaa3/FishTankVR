@@ -1,43 +1,17 @@
-﻿Build started 06/03/2013 15:23:11.
-     1>Project "E:\Workspace\FishTankVR\Predator\Predator.vcxproj" on node 2 (build target(s)).
+﻿Build started 04/04/2013 23:57:57.
+     1>Project "C:\Users\Mano\Desktop\delme\FishTankVR-master\FishTankVR-master\Predator\Predator.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Release\Predator.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IE:\Workspace\FishTankVR\Predator\tld\mftracker /IE:\Workspace\FishTankVR\FishTankVR\cv /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PREDATOR_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt tld\Vector3.cpp
-         Vector3.cpp
+         All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Release\Predator.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:E:\Workspace\FishTankVR\FishTankVR\cv\bin\x86\vc10\lib opencv_calib3d242.lib opencv_contrib242.lib opencv_core242.lib opencv_features2d242.lib opencv_flann242.lib opencv_gpu242.lib opencv_haartraining_engine.lib opencv_highgui242.lib opencv_imgproc242.lib opencv_legacy242.lib opencv_ml242.lib opencv_nonfree242.lib opencv_objdetect242.lib opencv_photo242.lib opencv_stitching242.lib opencv_ts242.lib opencv_video242.lib opencv_videostab242.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Predator.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Release\Predator.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Release\Predator.lib" /MACHINE:X86 /DLL Release\boundingbox.obj
-         Release\clusterer.obj
-         Release\detector.obj
-         Release\disjointset.obj
-         Release\feature.obj
-         Release\fern.obj
-         Release\ffclassifier.obj
-         Release\MedianFlowTracker.obj
-         Release\bb.obj
-         Release\bb_predict.obj
-         Release\fbtrack.obj
-         Release\lk.obj
-         Release\median.obj
-         Release\nnclassifier.obj
-         Release\normalizedpatch.obj
-         Release\params.obj
-         Release\Predator.obj
-         Release\tld_util.obj
-         Release\twobitbp.obj
-         Release\Vector3.obj
-            Creating library E:\Workspace\FishTankVR\Release\Predator.lib and object E:\Workspace\FishTankVR\Release\Predator.exp
-         Generating code
-     1>e:\workspace\fishtankvr\predator\tld\clusterer.cpp(62): warning C4700: uninitialized local variable 'conf' used
-         Finished generating code
-         Predator.vcxproj -> E:\Workspace\FishTankVR\Release\Predator.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Workspace\FishTankVR\Release\Predator.dll;#2" /manifest Release\Predator.dll.intermediate.manifest
+         All outputs are up-to-date.
+         Predator.vcxproj -> C:\Users\Mano\Desktop\delme\FishTankVR-master\FishTankVR-master\Release\Predator.dll
        FinalizeBuildStatus:
          Deleting file "Release\Predator.unsuccessfulbuild".
          Touching "Release\Predator.lastbuildstate".
-     1>Done Building Project "E:\Workspace\FishTankVR\Predator\Predator.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Mano\Desktop\delme\FishTankVR-master\FishTankVR-master\Predator\Predator.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:09.64
+Time Elapsed 00:00:00.13

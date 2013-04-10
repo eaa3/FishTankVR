@@ -14,10 +14,12 @@
     <ClCompile Include="head-tracker\FaceDetector.cpp" />
     <ClCompile Include="HeadTracker.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Model3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head-tracker\FaceDetector.h" />
     <ClInclude Include="HeadTracker.h" />
+    <ClInclude Include="Model3D.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FTVR\FTVR.vcxproj">
@@ -85,7 +87,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>E:\Workspace\FishTankVR\Predator\tld;E:\Workspace\FishTankVR\FTVR;$(ProjectDir)\tld;$(ProjectDir)\glut;$(ProjectDir)\cv;$(ProjectDir);$(ProjectDir)\tld\mftracker;$(ProjectDir)\head-tracker;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\FTVR;$(SolutionDir)\Predator\tld;$(ProjectDir)\glut;$(ProjectDir)\cv;$(ProjectDir);$(SolutionDir)\Predator\tld\mftracker;$(ProjectDir)\head-tracker;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

@@ -8,11 +8,18 @@
 #include "glut.h"
 #include <cstdlib>
 #include <math.h>
+#include "Model3D.h"
 
 using namespace cv;
 using namespace tld;
 
 Mat frame;
+
+Model3D* model = NULL;
+int modelAngle[3];
+int modelTrans[3];
+int centerAngle = 360;
+int centerTrans = 20;
 
 VideoCapture cap(0);
 
@@ -27,11 +34,31 @@ float realH = 0.275f; //0.02f;//37.5f;
 float aspectRatio = 16.0f/9.0f;
 float angle = 0;
 Vector3 eyepos;
+int scalingMovement;
+int scalingMovementCenter = 100;
 GLfloat size = 0.053f;//5.0f;
 
 GLuint tex1, tex2, tex3, tex4, tex5;
 bool activated = false;
 bool fullScreen = false;
+
+
+GLfloat ambientColor[] = {0.3f, 0.4f, 0.3f, 1.0f};
+
+//Positioned light
+GLfloat lightColor0[] = {0.5f, 0.5f, 0.5f, 1.0f};
+GLfloat lightPos0[] = {-.15f, .15f, -.20f, 1.0f};
+
+//Directed diffuse light
+GLfloat lightColor1[] = {5.0f, 2.0f, 2.0f, 1.0f};
+GLfloat lightPos1[] = {30.0f, -0.15f, -.15f, 0.0f};
+
+//Directed specular light
+GLfloat lightColor2[] = {1.0f, 1.0f, 1.0f, 1.0f};
+GLfloat lightPos2[] = {0.5, 0.5, 0.5, 0.0f};
+GLfloat specularity[4]= {0.9f,0.9f,0.9f,1.0};
+GLint specMaterial = 40;
+bool l0On = false, l1On = false, l2On = false;
 
 void setFishTankVRPerspective( Vector3 eyepos = Vector3(0,0,0.5) )
 {
@@ -93,6 +120,33 @@ void keyOp(unsigned char key, int x, int y)
 		ht.reset();
 
 	}
+
+	if ( key == 'b' ) 
+	{
+			l0On? glDisable(GL_LIGHT0) : glEnable(GL_LIGHT0);
+
+			l0On = !l0On;
+	}
+    if ( key == 'n' )
+	{
+		glEnable(GL_LIGHT1);
+
+		l1On? glDisable(GL_LIGHT1) : glEnable(GL_LIGHT1);
+
+		l1On = !l1On;
+	}
+    if( key == 'm' ) 
+	{
+		glEnable(GL_LIGHT2);
+
+		l2On? glDisable(GL_LIGHT2) : glEnable(GL_LIGHT2);
+
+		l2On = !l2On;
+	}
+
+
+
+
 }
 
 GLuint loadTexture(string filename)
@@ -250,6 +304,37 @@ void init()
 	//eyepos = Vector3(0,0,34.9f);
 
 
+
+	glEnable(GL_COLOR_MATERIAL);
+	glEnable(GL_LIGHTING);
+
+	glEnable(GL_NORMALIZE);
+    glShadeModel(GL_SMOOTH);
+	glEnable(GL_LINE_SMOOTH);
+
+	model = new Model3D("models/Modelo01.obj");
+
+	namedWindow("Control Window",CV_WINDOW_NORMAL);
+	
+	int angleLimit = 2*centerAngle;
+	modelAngle[0] = modelAngle[1] = modelAngle[2] = centerAngle;
+	createTrackbar("XRotationBar","Control Window", &modelAngle[0], angleLimit);
+	createTrackbar("YRotationBar","Control Window", &modelAngle[1], angleLimit);
+	createTrackbar("ZRotationBar","Control Window", &modelAngle[2], angleLimit);
+
+	int transLimit = 2*centerTrans;
+	modelTrans[0] = modelTrans[1] = modelTrans[2] = centerTrans;
+	createTrackbar("XTranslationBar","Control Window", &modelTrans[0], transLimit);
+	createTrackbar("YTranslationBar","Control Window", &modelTrans[1], transLimit);
+	createTrackbar("ZTranslationBar","Control Window", &modelTrans[2], transLimit);
+
+	int scalingMovementLimit = 1*scalingMovementCenter;
+	scalingMovement = 70;
+	createTrackbar("ScalingHeadMovement","Control Window", &scalingMovement, scalingMovementLimit);
+
+
+	
+
 }
 
 void deinit(void)
@@ -283,12 +368,28 @@ void display()
 	line(frame, Point2i(0,H/2), Point2i(W,H/2), Scalar(255,255,0), 2);
 
 	//Drawing detected eye estimated position inside bounding box surrounding user's head
-	Vec2f eye2D = ht.get2DEyePixelSpacePosition(bb, 0.3f);
+	Vec2f eye2D = ht.get2DEyePixelSpacePosition(bb, 0.5f);
 	Point2f eye2DPosPixelSpace(eye2D);
 
 	circle(frame, eye2DPosPixelSpace , 5, Scalar(0,255,0), 2);
 
 	imshow("VoxarLabs - FTVR Eye Seeker",frame);
+
+	//Setting up lights
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientColor);
+
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, lightColor0);
+    glLightfv(GL_LIGHT0, GL_POSITION, lightPos0);
+
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, lightColor1);
+    glLightfv(GL_LIGHT1, GL_POSITION, lightPos1);
+
+    glMaterialfv(GL_FRONT,GL_SPECULAR, specularity);
+
+    glMateriali(GL_FRONT,GL_SHININESS,specMaterial);
+
+    glLightfv(GL_LIGHT2, GL_SPECULAR, lightColor2);
+    glLightfv(GL_LIGHT2, GL_SPECULAR, lightPos2);
 
 	
 	if(activated){
@@ -300,7 +401,8 @@ void display()
 
 		}else if ( bb.valid ) {			
 
-		Vec3f v = ht.estimateSpacePosition(bb,W,realH*1.1f,H,realH,estimator, 0.3f);
+		float scalingMovementf = 1.0f - float(scalingMovementCenter - scalingMovement + 1)/100;
+		Vec3f v = ht.estimateSpacePosition(bb,W*scalingMovementf,realH*1.1f,H*scalingMovementf,realH,estimator, 0.5f);
 		v[1] += realH*0.25f;
 
 		eyepos = Vector3(v[0]*aspectRatio,v[1],v[2] );
@@ -329,7 +431,7 @@ void display()
 
 
 
-	drawBorderedCube(size, Vec3f(0,0,size/2), Vec4f(0.8,0.3,0.3,0.1), Vec4f(0,0,0,0));
+	//drawBorderedCube(size, Vec3f(0,0,size/2), Vec4f(0.8,0.3,0.3,0.1), Vec4f(0,0,0,0));
 
 	drawBorderedCube(size, Vec3f(-0.09, -0.10, -0.05), Vec4f(0.3,0.8,0.3,0.1), Vec4f(0,0,0,0) );
 
@@ -338,6 +440,19 @@ void display()
 
 	drawBorderedTeapot(size-0.02, Vec3f(-0.18, ft.b + 0.025, -0.10), Vec4f(0.3,0.3,0.8,0.3), Vec4f(0,0,0,0) );
 
+	model->scaleFactor[0] = 0.015;
+	model->scaleFactor[1] = 0.015;
+	model->scaleFactor[2] = -0.015;
+
+	model->angle[0] = centerAngle - modelAngle[0];
+	model->angle[1] = centerAngle - modelAngle[1];
+	model->angle[2] = centerAngle - modelAngle[2];
+
+	model->translation[0] = float(modelTrans[0] - centerTrans)/100;
+	model->translation[1] = float(modelTrans[1] - centerTrans)/100;
+	model->translation[2] = float(modelTrans[2] - centerTrans)/100;
+	
+	model->draw();
 
 	glutSwapBuffers();
 	glutPostRedisplay();

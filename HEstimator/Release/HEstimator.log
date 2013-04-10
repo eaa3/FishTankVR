@@ -1,25 +1,17 @@
-﻿Build started 06/03/2013 15:23:11.
-     1>Project "E:\Workspace\FishTankVR\HEstimator\HEstimator.vcxproj" on node 3 (build target(s)).
+﻿Build started 04/04/2013 23:57:57.
+     1>Project "C:\Users\Mano\Desktop\delme\FishTankVR-master\FishTankVR-master\HEstimator\HEstimator.vcxproj" on node 4 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Release\DepthEstimator.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D HESTIMATOR_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DepthEstimator.cpp
-         DepthEstimator.cpp
-     1>DepthEstimator.cpp(6): warning C4273: 'depthEstimator' : inconsistent dll linkage
-                 e:\workspace\fishtankvr\hestimator\DepthEstimator.h(13) : see previous definition of 'depthEstimator'
+         All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\FishTankVR\Release\DepthEstimator.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\DepthEstimator.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\FishTankVR\Release\DepthEstimator.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\FishTankVR\Release\DepthEstimator.lib" /MACHINE:X86 /DLL Release\DepthEstimator.obj
-            Creating library E:\Workspace\FishTankVR\Release\DepthEstimator.lib and object E:\Workspace\FishTankVR\Release\DepthEstimator.exp
-         Generating code
-         Finished generating code
-         HEstimator.vcxproj -> E:\Workspace\FishTankVR\Release\DepthEstimator.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Workspace\FishTankVR\Release\DepthEstimator.dll;#2" /manifest Release\DepthEstimator.dll.intermediate.manifest
+         All outputs are up-to-date.
+         HEstimator.vcxproj -> C:\Users\Mano\Desktop\delme\FishTankVR-master\FishTankVR-master\Release\DepthEstimator.dll
        FinalizeBuildStatus:
          Deleting file "Release\DepthEstimator.unsuccessfulbuild".
          Touching "Release\DepthEstimator.lastbuildstate".
-     1>Done Building Project "E:\Workspace\FishTankVR\HEstimator\HEstimator.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Mano\Desktop\delme\FishTankVR-master\FishTankVR-master\HEstimator\HEstimator.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.29
+Time Elapsed 00:00:00.17

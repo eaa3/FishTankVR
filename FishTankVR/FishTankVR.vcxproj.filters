@@ -38,6 +38,9 @@
     <ClCompile Include="HeadTracker.cpp">
       <Filter>FishTank\source\head-tracker\source</Filter>
     </ClCompile>
+    <ClCompile Include="Model3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head-tracker\FaceDetector.h">
@@ -45,6 +48,9 @@
     </ClInclude>
     <ClInclude Include="HeadTracker.h">
       <Filter>FishTank\source\head-tracker\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Model3D.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
