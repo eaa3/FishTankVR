@@ -3,7 +3,13 @@
 /Release
 /Debug
 /ipch
+/Predator/Release
+/Predator/Debug
+/FTVR/Release
+/FTVR/Debug
 /FishTankVR/Release
 /FishTankVR/Debug
+/HEstimator/Release
+/HEstimator/Debug
 FishTankVR.sdf
 FishTankVR.opensdf

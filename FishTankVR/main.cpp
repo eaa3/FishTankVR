@@ -401,8 +401,8 @@ void display()
 
 		}else if ( bb.valid ) {			
 
-		float scalingMovementf = 1.0f - float(scalingMovementCenter - scalingMovement + 1)/100;
-		Vec3f v = ht.estimateSpacePosition(bb,W*scalingMovementf,realH*1.1f,H*scalingMovementf,realH,estimator, 0.5f);
+		float scalingMovementf = float(scalingMovement)/100.0f + 0.01f;
+		Vec3f v = ht.estimateSpacePosition(bb,W*scalingMovementf,realH,H*scalingMovementf,realH,estimator, 0.5f);
 		v[1] += realH*0.25f;
 
 		eyepos = Vector3(v[0]*aspectRatio,v[1],v[2] );
